@@ -1,0 +1,80 @@
+---
+const services = [
+  {
+    n:'01',
+    title:'Website Development',
+    desc:'From sleek landing pages to complex web platforms. We build fast, SEO-ready, beautifully crafted websites tailored to your brand and business goals.',
+    tags:['Astro','WordPress','Next.js','Node.js'],
+    icon:`<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>`,
+  },
+  {
+    n:'02',
+    title:'Mobile App Development',
+    desc:'Native-quality Flutter apps for iOS and Android. We handle everything — UI, backend middleware and publishing to the App Store and Play Store.',
+    tags:['Flutter','Dart','Node.js','MariaDB','AWS'],
+    icon:`<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="5" y="2" width="14" height="20" rx="2"/><circle cx="12" cy="18" r="1" fill="currentColor"/></svg>`,
+  },
+  {
+    n:'03',
+    title:'SaaS Product Development',
+    desc:'End-to-end SaaS platforms built for scale — complete with authentication, dashboards, billing integration and multi-tenant architecture.',
+    tags:['Next.js','Node.js','MariaDB','AWS','Stripe'],
+    icon:`<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>`,
+  },
+  {
+    n:'04',
+    title:'UI / UX Design',
+    desc:'Thoughtful, pixel-perfect interfaces designed with Affinity and Adobe tools. We make products people love to use — from wireframes to polished final specs.',
+    tags:['Affinity Designer','Adobe XD','Figma','Prototyping'],
+    icon:`<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9" stroke-width="2.5"/><line x1="15" y1="9" x2="15.01" y2="9" stroke-width="2.5"/></svg>`,
+  },
+];
+---
+
+<section id="services" class="relative py-28 overflow-hidden">
+  <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-[#e5173f] rounded-full blur-[200px] opacity-[0.04]"></div>
+
+  <div class="max-w-7xl mx-auto px-5 lg:px-10">
+
+    <!-- Header -->
+    <div class="mb-16">
+      <div class="reveal inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[#e5173f]/20 bg-[#e5173f]/[0.06] mb-5">
+        <span class="w-1.5 h-1.5 rounded-full bg-[#e5173f]"></span>
+        <span class="text-[#e5173f] text-[11px] uppercase tracking-widest">What We Do</span>
+      </div>
+      <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-5">
+        <h2 class="reveal reveal-delay-1 font-display font-extrabold text-[clamp(2.2rem,5vw,3.8rem)] text-white leading-tight">
+          Our <span class="text-gradient">Services</span>
+        </h2>
+        <p class="reveal reveal-delay-2 text-white/45 text-base max-w-sm leading-relaxed">
+          Everything you need to build, launch and grow a digital product — under one roof.
+        </p>
+      </div>
+    </div>
+
+    <!-- Cards -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 stagger">
+      {services.map((s,i) => (
+        <div class="reveal card-hover group relative p-8 rounded-2xl border border-white/[0.06] bg-white/[0.02] hover:border-[#e5173f]/25 hover:bg-[#e5173f]/[0.03] transition-all duration-400 overflow-hidden cursor-default">
+
+          <!-- Watermark number -->
+          <div class="absolute bottom-4 right-6 font-display font-extrabold text-[5rem] text-white/[0.025] leading-none select-none pointer-events-none">{s.n}</div>
+
+          <!-- Icon -->
+          <div class="w-11 h-11 rounded-xl bg-[#e5173f]/10 border border-[#e5173f]/20 flex items-center justify-center text-[#e5173f] mb-5 group-hover:bg-[#e5173f]/20 transition-colors duration-300">
+            <Fragment set:html={s.icon}/>
+          </div>
+
+          <h3 class="font-display font-bold text-[1.1rem] text-white mb-3 group-hover:text-[#e5173f] transition-colors duration-300">{s.title}</h3>
+          <p class="text-white/45 text-[13.5px] leading-relaxed mb-5">{s.desc}</p>
+
+          <div class="flex flex-wrap gap-1.5">
+            {s.tags.map(t=>(
+              <span class="px-2.5 py-1 text-[11px] text-white/35 bg-white/[0.04] border border-white/[0.07] rounded-full">{t}</span>
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

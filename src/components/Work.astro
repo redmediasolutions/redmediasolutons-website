@@ -1,0 +1,361 @@
+---
+const projects = [
+  {
+    slug:'carekapital',
+    name:'Carekapital',
+    category:'FinTech · Web Platform',
+    desc:'A comprehensive bond investment management platform for wealth managers featuring real-time bond listings, investor directory, AUM dashboards and payout tracking.',
+    type:'desktop',
+    tech:['Next.js','Node.js','MariaDB','AWS'],
+    color:'#4f8ef7',
+    mockupBg:'#f8f9fc',
+    mockupContent:`
+      <div style="font-family:-apple-system,sans-serif;font-size:10px;background:#f8f9fc;height:100%;display:flex;overflow:hidden">
+        <div style="width:160px;background:#fff;border-right:1px solid #eee;padding:14px 0;flex-shrink:0">
+          <div style="padding:0 14px 12px;border-bottom:1px solid #eee;margin-bottom:8px;display:flex;align-items:center;gap:8px">
+            <div style="background:#4f8ef7;color:#fff;width:26px;height:26px;border-radius:6px;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:12px">C</div>
+            <span style="font-weight:700;font-size:12px;color:#1a1a1a">Carekapital</span>
+          </div>
+          <div style="padding:0 10px">
+            <div style="padding:5px 8px;border-radius:5px;background:#eff4ff;color:#4f8ef7;font-weight:600;margin-bottom:2px;font-size:11px">Bond Listings</div>
+            <div style="padding:5px 8px;color:#777;font-size:11px;margin-bottom:2px">Investors</div>
+            <div style="padding:5px 8px;color:#777;font-size:11px;margin-bottom:2px">Payouts</div>
+            <div style="padding:5px 8px;color:#777;font-size:11px">Payout Requests</div>
+          </div>
+        </div>
+        <div style="flex:1;padding:16px;overflow:hidden">
+          <div style="font-size:15px;font-weight:700;color:#1a1a1a;margin-bottom:3px">Bond Listings</div>
+          <div style="color:#999;font-size:9px;margin-bottom:12px">Manage and monitor your investment inventory</div>
+          <div style="background:#fff;border:1px solid #eee;border-radius:8px;padding:11px;margin-bottom:7px">
+            <div style="display:flex;align-items:center;gap:7px;margin-bottom:7px">
+              <div style="background:#4f8ef7;color:#fff;width:20px;height:20px;border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:8px;font-weight:700">C</div>
+              <span style="font-weight:600;font-size:11px">ALPHA 1</span>
+              <span style="background:#e6f9f0;color:#14b866;padding:1px 5px;border-radius:8px;font-size:8px">ACTIVE</span>
+            </div>
+            <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:6px">
+              <div><div style="color:#999;font-size:8px">Return</div><div style="color:#14b866;font-weight:600;font-size:10px">15.09%</div></div>
+              <div><div style="color:#999;font-size:8px">Min Invest</div><div style="font-weight:500;font-size:10px">₹17.8L</div></div>
+              <div><div style="color:#999;font-size:8px">Duration</div><div style="font-weight:500;font-size:10px">60m</div></div>
+              <div><div style="color:#999;font-size:8px">Risk</div><div style="color:#4f8ef7;font-weight:500;font-size:10px">LOW</div></div>
+            </div>
+          </div>
+          <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:10px">
+            <div style="background:#fff;border:1px solid #eee;border-radius:8px;padding:9px">
+              <div style="color:#999;font-size:8px;margin-bottom:2px">AUM</div>
+              <div style="font-size:14px;font-weight:700;color:#1a1a1a">₹43.3L</div>
+              <div style="color:#14b866;font-size:8px">▲ 48.3%</div>
+            </div>
+            <div style="background:#fff;border:1px solid #eee;border-radius:8px;padding:9px">
+              <div style="color:#999;font-size:8px;margin-bottom:2px">Payouts</div>
+              <div style="font-size:14px;font-weight:700;color:#1a1a1a">₹7.5L</div>
+              <div style="color:#f59e0b;font-size:8px">49 pending</div>
+            </div>
+            <div style="background:#fff;border:1px solid #eee;border-radius:8px;padding:9px">
+              <div style="color:#999;font-size:8px;margin-bottom:2px">Investors</div>
+              <div style="font-size:14px;font-weight:700;color:#1a1a1a">3</div>
+              <div style="color:#14b866;font-size:8px">▲ 12.5%</div>
+            </div>
+          </div>
+        </div>
+      </div>`,
+  },
+  {
+    slug:'hrcrm',
+    name:'HRCRM',
+    category:'HRTech · SaaS Platform',
+    desc:'Comprehensive HR management SaaS for managing employees, payroll, financial assistance loans, and attendance across multiple departments.',
+    type:'desktop',
+    tech:['Next.js','Node.js','MariaDB','AWS'],
+    color:'#2dd4bf',
+    mockupContent:`
+      <div style="font-family:-apple-system,sans-serif;font-size:10px;background:#f5f5f5;height:100%;display:flex;overflow:hidden">
+        <div style="width:150px;background:#fff;border-right:1px solid #eee;padding:12px 0;flex-shrink:0">
+          <div style="padding:0 12px 10px;border-bottom:1px solid #eee;margin-bottom:6px">
+            <div style="font-weight:700;color:#1a1a1a;font-size:11px">The Workplace</div>
+            <div style="color:#999;font-size:8px">HR Administration</div>
+          </div>
+          <div style="padding:0 8px">
+            <div style="padding:5px 8px;border-radius:5px;background:#f0fdfa;color:#0d9488;font-weight:600;margin-bottom:2px;font-size:10px">Staff</div>
+            <div style="padding:5px 8px;color:#777;font-size:10px;margin-bottom:2px">Payroll</div>
+            <div style="padding:5px 8px;color:#777;font-size:10px;margin-bottom:2px">Attendance</div>
+            <div style="padding:5px 8px;color:#777;font-size:10px">Reports</div>
+          </div>
+        </div>
+        <div style="flex:1;padding:14px;overflow:hidden">
+          <div style="font-size:13px;font-weight:700;color:#1a1a1a;margin-bottom:3px">Staff Directory</div>
+          <div style="color:#999;font-size:8px;margin-bottom:10px">Manage workforce and departmental access</div>
+          <div style="display:flex;gap:5px;margin-bottom:10px">
+            <div style="padding:2px 8px;background:#0d9488;color:#fff;border-radius:20px;font-size:8px;font-weight:600">All</div>
+            <div style="padding:2px 8px;background:#f1f5f9;color:#666;border-radius:20px;font-size:8px">Counselling</div>
+            <div style="padding:2px 8px;background:#f1f5f9;color:#666;border-radius:20px;font-size:8px">Field Work</div>
+          </div>
+          <div style="background:#fff;border:1px solid #eee;border-radius:7px;overflow:hidden">
+            <div style="display:grid;grid-template-columns:1.5fr 1fr 0.7fr;gap:4px;padding:5px 8px;background:#f8fafc;border-bottom:1px solid #eee;color:#aaa;font-size:7px;text-transform:uppercase;letter-spacing:.05em">
+              <div>Employee</div><div>Position</div><div>Status</div>
+            </div>
+            ${['John','Keerthan','Edison','Sujay Kumar'].map(n=>`
+            <div style="display:grid;grid-template-columns:1.5fr 1fr 0.7fr;gap:4px;padding:6px 8px;border-bottom:1px solid #f5f5f5;align-items:center">
+              <div style="display:flex;align-items:center;gap:5px">
+                <div style="width:18px;height:18px;background:linear-gradient(135deg,#2dd4bf,#0d9488);border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:7px;font-weight:700;flex-shrink:0">${n[0]}</div>
+                <span style="font-weight:500;color:#1a1a1a;font-size:9px">${n}</span>
+              </div>
+              <div style="color:#666;font-size:9px">Employee</div>
+              <div><span style="background:#e6f9f0;color:#14b866;padding:1px 5px;border-radius:6px;font-size:7px">Active</span></div>
+            </div>`).join('')}
+          </div>
+        </div>
+      </div>`,
+  },
+  {
+    slug:'salescrm',
+    name:'SalesCRM',
+    category:'Inventory Management · SaaS',
+    desc:'Dark-mode-first inventory and stock management platform. Track products, vendors, serial numbers, stock conditions and purchase dates.',
+    type:'desktop',
+    tech:['Next.js','Node.js','MariaDB','AWS'],
+    color:'#f59e0b',
+    mockupContent:`
+      <div style="font-family:-apple-system,sans-serif;font-size:9px;background:#111;height:100%;display:flex;color:#e0e0e0;overflow:hidden">
+        <div style="width:44px;background:#0d0d0d;border-right:1px solid #1e1e1e;display:flex;flex-direction:column;align-items:center;padding:10px 0;gap:12px;flex-shrink:0">
+          <div style="width:26px;height:26px;background:#f59e0b;border-radius:5px;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:#000">S</div>
+          <div style="width:18px;height:18px;background:#1e1e1e;border-radius:3px"></div>
+          <div style="width:18px;height:18px;background:#1e2a1e;border-radius:3px"></div>
+        </div>
+        <div style="flex:1;display:flex;flex-direction:column;overflow:hidden">
+          <div style="padding:9px 12px;border-bottom:1px solid #1e1e1e;display:flex;align-items:center;gap:8px">
+            <span style="font-size:12px;font-weight:700">Stocks</span>
+            <div style="background:#f59e0b;color:#000;padding:2px 8px;border-radius:10px;font-size:8px;font-weight:700">+ Add Stock</div>
+            <div style="flex:1"></div>
+            <div style="background:#1a1a1a;border:1px solid #2a2a2a;border-radius:5px;padding:3px 8px;color:#555;font-size:8px">Search products…</div>
+          </div>
+          <div style="display:grid;grid-template-columns:2fr 0.8fr 1fr 0.7fr 0.7fr 0.8fr;gap:3px;padding:5px 12px;background:#0d0d0d;border-bottom:1px solid #1e1e1e;color:#444;text-transform:uppercase;font-size:7px;letter-spacing:.05em">
+            <div>Brand</div><div>Serial</div><div>Vendor</div><div>Cost</div><div>Sale</div><div>Status</div>
+          </div>
+          ${[
+            {b:'Macbook Pro M1',v:'Lekhup Intl',c:'₹82,000',s:'₹98,000',st:'In Stock',sc:'#14b866'},
+            {b:'Dell OptiPlex 5060',v:'Trafa International',c:'₹28,108',s:'₹32,000',st:'Sold',sc:'#ef4444'},
+            {b:'Dell Latitude 7480',v:'Shima Kumar',c:'₹41,450',s:'₹48,000',st:'Sold',sc:'#ef4444'},
+            {b:'DELL F425',v:'Shima Kumar',c:'₹77,837',s:'₹88,000',st:'In Stock',sc:'#14b866'},
+          ].map(r=>`
+          <div style="display:grid;grid-template-columns:2fr 0.8fr 1fr 0.7fr 0.7fr 0.8fr;gap:3px;padding:5px 12px;border-bottom:1px solid #161616;align-items:center">
+            <div style="font-weight:500;font-size:9px;color:#ddd;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${r.b}</div>
+            <div style="color:#555;font-size:8px">SN-${Math.floor(Math.random()*9999+1000)}</div>
+            <div style="color:#888;font-size:8px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${r.v}</div>
+            <div style="color:#999;font-size:8px">${r.c}</div>
+            <div style="color:#f59e0b;font-size:8px;font-weight:600">${r.s}</div>
+            <div><span style="padding:1px 5px;border-radius:6px;font-size:7px;font-weight:600;background:${r.sc}22;color:${r.sc}">${r.st}</span></div>
+          </div>`).join('')}
+        </div>
+      </div>`,
+  },
+  {
+    slug:'konkani-music',
+    name:'Konkani Music',
+    category:'Music Streaming · Mobile App',
+    desc:'Dedicated music streaming platform for Konkani culture — featuring traditional hymns, modern tunes, curated playlists. Live on Android & iOS.',
+    type:'mobile',
+    tech:['Flutter','Dart','Node.js','Firebase'],
+    color:'#8b5cf6',
+    mockupContent:`
+      <div style="font-family:-apple-system,sans-serif;font-size:10px;background:linear-gradient(160deg,#1a0a2e 0%,#0d0d1a 100%);height:100%;padding:18px 14px;color:#fff;overflow:hidden">
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:14px">
+          <span style="color:#b794f4;font-size:11px;font-weight:700">Konkani Music</span>
+          <span style="font-size:13px">🔍</span>
+        </div>
+        <div style="font-size:12px;font-weight:700;margin-bottom:8px">Playlist for You</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:7px;margin-bottom:12px">
+          <div style="background:linear-gradient(135deg,#7c3aed,#4f46e5);border-radius:10px;padding:10px;height:64px;display:flex;align-items:flex-end">
+            <div style="font-size:8px;font-weight:600;opacity:.9">Lent Hymns</div>
+          </div>
+          <div style="background:linear-gradient(135deg,#d97706,#b45309);border-radius:10px;padding:10px;height:64px;display:flex;align-items:flex-end">
+            <div style="font-size:8px;font-weight:600;opacity:.9">Marian Hymns</div>
+          </div>
+        </div>
+        <div style="font-size:10px;font-weight:700;margin-bottom:7px">Latest Releases</div>
+        <div style="background:rgba(255,255,255,.06);border:1px solid rgba(139,92,246,.3);border-radius:8px;padding:7px;margin-bottom:5px;display:flex;align-items:center;gap:7px">
+          <div style="width:32px;height:32px;background:linear-gradient(135deg,#8b5cf6,#ec4899);border-radius:6px;flex-shrink:0"></div>
+          <div style="flex:1"><div style="font-weight:600;font-size:9px">Khursa Savlent</div><div style="color:rgba(255,255,255,.5);font-size:8px">Walter D'Souza</div></div>
+          <div style="width:22px;height:22px;background:#8b5cf6;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:9px">▶</div>
+        </div>
+        <div style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:8px;padding:7px;margin-bottom:5px;display:flex;align-items:center;gap:7px">
+          <div style="width:32px;height:32px;background:linear-gradient(135deg,#f59e0b,#ef4444);border-radius:6px;flex-shrink:0"></div>
+          <div style="flex:1"><div style="font-weight:600;font-size:9px">Traditional Tunes</div><div style="color:rgba(255,255,255,.5);font-size:8px">Konkani Folk</div></div>
+          <div style="width:22px;height:22px;background:#333;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:9px">▶</div>
+        </div>
+        <div style="margin-top:10px;background:rgba(139,92,246,.2);border:1px solid rgba(139,92,246,.4);border-radius:8px;padding:7px;display:flex;align-items:center;justify-content:space-between">
+          <div style="display:flex;align-items:center;gap:6px">
+            <div style="width:22px;height:22px;background:linear-gradient(135deg,#8b5cf6,#4f46e5);border-radius:4px"></div>
+            <div><div style="font-size:8px;font-weight:600">Now Playing</div><div style="font-size:7px;opacity:.6">Khursa Savlent</div></div>
+          </div>
+          <div style="font-size:12px">⏸</div>
+        </div>
+      </div>`,
+  },
+  {
+    slug:'108medz',
+    name:'108 Medz',
+    category:'HealthTech · Mobile App',
+    desc:'Affordable healthcare app for ordering WHO/GMP-approved medicines with 70% savings, WhatsApp prescription upload and real-time order tracking.',
+    type:'mobile',
+    tech:['Flutter','Dart','Node.js','MariaDB'],
+    color:'#14b866',
+    mockupContent:`
+      <div style="font-family:-apple-system,sans-serif;font-size:10px;height:100%;overflow:hidden;background:#fff">
+        <div style="background:linear-gradient(135deg,#1a3c8f,#2563eb);padding:14px 12px;color:#fff">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px">
+            <div><div style="font-size:8px;opacity:.7">108 MEDZ</div><div style="font-size:12px;font-weight:700">Affordable Healthcare</div></div>
+          </div>
+          <div style="background:rgba(255,255,255,.95);border-radius:8px;padding:9px;color:#1a1a1a">
+            <div style="color:#2563eb;font-weight:700;font-size:10px;margin-bottom:2px">Why Choose 108 Medz</div>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:4px;margin-top:6px">
+              <div style="display:flex;gap:3px;align-items:center"><span style="font-size:9px">🏭</span><span style="font-size:8px">Top Brands</span></div>
+              <div style="display:flex;gap:3px;align-items:center"><span style="font-size:9px">✅</span><span style="font-size:8px">WHO Approved</span></div>
+              <div style="display:flex;gap:3px;align-items:center"><span style="font-size:9px">↩️</span><span style="font-size:8px">10 Day Returns</span></div>
+              <div style="display:flex;gap:3px;align-items:center"><span style="font-size:9px">📦</span><span style="font-size:8px">2000+ Products</span></div>
+            </div>
+          </div>
+        </div>
+        <div style="padding:10px 12px;background:#f8f9fa">
+          <div style="font-weight:700;color:#1a1a1a;margin-bottom:7px;font-size:10px">Track your Orders</div>
+          <div style="background:#fff;border:1px solid #eee;border-radius:7px;padding:8px;margin-bottom:5px;display:flex;align-items:center;gap:7px">
+            <div style="width:30px;height:30px;background:linear-gradient(135deg,#2563eb,#7c3aed);border-radius:5px;flex-shrink:0"></div>
+            <div style="flex:1"><div style="font-weight:600;font-size:9px">Order #1242</div><div style="color:#999;font-size:8px">Delivered · 3 items</div></div>
+            <div style="background:#e6f9f0;color:#14b866;padding:2px 6px;border-radius:10px;font-size:7px;font-weight:600">Done</div>
+          </div>
+          <div style="background:#fff;border:1px solid #eee;border-radius:7px;padding:8px;margin-bottom:5px;display:flex;align-items:center;gap:7px">
+            <div style="width:30px;height:30px;background:linear-gradient(135deg,#f59e0b,#ef4444);border-radius:5px;flex-shrink:0"></div>
+            <div style="flex:1"><div style="font-weight:600;font-size:9px">Order #1241</div><div style="color:#999;font-size:8px">In Transit · 1 item</div></div>
+            <div style="background:#fef3c7;color:#d97706;padding:2px 6px;border-radius:10px;font-size:7px;font-weight:600">Transit</div>
+          </div>
+        </div>
+        <div style="margin:8px 12px;background:linear-gradient(135deg,#1a3c8f,#2563eb);border-radius:9px;padding:10px;color:#fff;display:flex;justify-content:space-between;align-items:center">
+          <div><div style="font-size:10px;font-weight:700">100% Safe Medicine</div><div style="font-size:8px;opacity:.8;margin-top:2px">From Top Pharma Brands</div></div>
+          <div style="background:rgba(255,255,255,.15);border-radius:7px;padding:5px 8px;text-align:center">
+            <div style="font-size:8px;opacity:.8">Savings</div>
+            <div style="font-size:14px;font-weight:800;color:#4ade80">70%</div>
+          </div>
+        </div>
+      </div>`,
+  },
+  {
+    slug:'anwymed',
+    name:'AnwyMed',
+    category:'HealthTech · Mobile App',
+    desc:'Clinic management app for doctors — manage patient appointments, generate invoices, track pending revenue and monitor inventory alerts.',
+    type:'mobile',
+    tech:['Flutter','Dart','Node.js','MariaDB'],
+    color:'#3b82f6',
+    mockupContent:`
+      <div style="font-family:-apple-system,sans-serif;font-size:10px;background:linear-gradient(160deg,#1e3a8a 0%,#2563eb 100%);height:100%;padding:14px 12px;color:#fff;overflow:hidden">
+        <div style="font-size:8px;opacity:.6;margin-bottom:2px">8:11</div>
+        <div style="display:flex;align-items:center;gap:5px;margin-bottom:10px">
+          <div style="width:22px;height:22px;background:rgba(255,255,255,.2);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:9px">👨‍⚕️</div>
+          <span style="font-weight:700;font-size:11px">AnwyMed</span>
+        </div>
+        <div style="font-size:14px;font-weight:700;margin-bottom:3px">Morning, Doctor 👋</div>
+        <div style="font-size:8px;opacity:.65;margin-bottom:12px">Schedule optimised for today</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-bottom:12px">
+          <div style="background:rgba(255,255,255,.2);border:1px solid rgba(255,255,255,.3);border-radius:9px;padding:9px;text-align:center">
+            <div style="font-size:10px;font-weight:700">Consult</div>
+            <div style="font-size:8px;opacity:.75;margin-top:1px">+ Quick Invoice</div>
+          </div>
+          <div style="background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);border-radius:9px;padding:9px;text-align:center">
+            <div style="font-size:10px;font-weight:700">New Patient</div>
+            <div style="font-size:8px;opacity:.75;margin-top:1px">Register now</div>
+          </div>
+        </div>
+        <div style="font-size:13px;font-weight:700;margin-bottom:7px">12 <span style="font-size:9px;opacity:.6;font-weight:400">Appointments</span></div>
+        ${['Eleanor Markova · Consultation','Julian Schmidt · Follow-up','Priya Sharma · New Patient'].map(a=>`
+        <div style="background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.14);border-radius:7px;padding:7px;margin-bottom:4px;display:flex;align-items:center;justify-content:space-between">
+          <div style="display:flex;align-items:center;gap:6px">
+            <div style="width:20px;height:20px;background:rgba(255,255,255,.2);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:8px;font-weight:700">${a[0]}</div>
+            <div><div style="font-weight:600;font-size:9px">${a.split('·')[0].trim()}</div><div style="font-size:7px;opacity:.6">${a.split('·')[1]?.trim()}</div></div>
+          </div>
+        </div>`).join('')}
+        <div style="margin-top:8px;background:rgba(255,255,255,.08);border-radius:7px;padding:7px;display:flex;justify-content:space-between;align-items:center">
+          <div><div style="font-size:8px;opacity:.65">Pending Revenue</div><div style="font-size:13px;font-weight:700">₹4,280</div></div>
+          <div style="background:#fbbf24;color:#000;padding:3px 7px;border-radius:5px;font-size:8px;font-weight:700">4 Items Low</div>
+        </div>
+      </div>`,
+  },
+];
+---
+
+<section id="work" class="relative py-28 overflow-hidden bg-[#080808]">
+  <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#e5173f]/20 to-transparent"></div>
+  <div class="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#e5173f]/10 to-transparent"></div>
+  <div class="absolute top-1/3 right-0 w-[500px] h-[500px] bg-[#e5173f] rounded-full blur-[220px] opacity-[0.04]"></div>
+
+  <div class="max-w-7xl mx-auto px-5 lg:px-10">
+
+    <!-- Header -->
+    <div class="mb-16">
+      <div class="reveal inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[#e5173f]/20 bg-[#e5173f]/[0.06] mb-5">
+        <span class="w-1.5 h-1.5 rounded-full bg-[#e5173f]"></span>
+        <span class="text-[#e5173f] text-[11px] uppercase tracking-widest">Our Work</span>
+      </div>
+      <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-5">
+        <h2 class="reveal reveal-delay-1 font-display font-extrabold text-[clamp(2.2rem,5vw,3.8rem)] text-white leading-tight">
+          Real Projects,<br /><span class="text-gradient">Real Results</span>
+        </h2>
+        <p class="reveal reveal-delay-2 text-white/45 text-base max-w-sm leading-relaxed">
+          Every project is crafted with intention — pixel-perfect design, clean code, on-time delivery.
+        </p>
+      </div>
+    </div>
+
+    <!-- Project rows -->
+    <div class="space-y-5">
+      {projects.map((p,i)=>(
+        <a href={`/projects/${p.slug}`} class="reveal card-hover group block rounded-2xl border border-white/[0.06] bg-[#0d0d0d] overflow-hidden hover:border-[#e5173f]/20 transition-all duration-400">
+          <div class="grid grid-cols-1 lg:grid-cols-2">
+
+            <!-- Text side -->
+            <div class="p-8 lg:p-10 flex flex-col justify-center">
+              <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border mb-4 self-start"
+                   style={`border-color:${p.color}28;background:${p.color}0e`}>
+                <span class="w-1.5 h-1.5 rounded-full" style={`background:${p.color}`}></span>
+                <span class="text-[11px] font-medium" style={`color:${p.color}`}>{p.category}</span>
+              </div>
+
+              <h3 class="font-display font-bold text-2xl lg:text-3xl text-white mb-3 group-hover:text-[#e5173f] transition-colors">{p.name}</h3>
+              <p class="text-white/45 text-sm leading-relaxed mb-5 max-w-sm">{p.desc}</p>
+
+              <div class="flex flex-wrap gap-1.5 mb-6">
+                {p.tech.map(t=>(
+                  <span class="px-2.5 py-1 text-[11px] text-white/35 bg-white/[0.04] border border-white/[0.07] rounded-full">{t}</span>
+                ))}
+              </div>
+
+              <div class="project-link-line text-[12px] text-white/35 group-hover:text-[#e5173f] transition-colors w-fit">
+                <span>View Case Study</span>
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M1 6h10M7 2l4 4-4 4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+            </div>
+
+            <!-- Mockup side -->
+            <div class="relative overflow-hidden bg-[#111] min-h-[260px] lg:min-h-0 flex items-center justify-center p-6 lg:p-10">
+              <div class="absolute inset-0 opacity-30" style={`background:radial-gradient(ellipse at 50% 50%, ${p.color}18, transparent 70%)`}></div>
+              {p.type === 'mobile' ? (
+                <div class="phone-mockup w-[180px] h-[360px] relative z-10 overflow-hidden">
+                  <div class="w-full h-full" set:html={p.mockupContent}/>
+                </div>
+              ) : (
+                <div class="relative z-10 w-full max-w-[420px]">
+                  <div class="desktop-mockup">
+                    <div class="desktop-mockup-bar">
+                      <div class="desktop-mockup-dot" style="background:#ef4444"></div>
+                      <div class="desktop-mockup-dot" style="background:#f59e0b"></div>
+                      <div class="desktop-mockup-dot" style="background:#22c55e"></div>
+                    </div>
+                    <div style="height:240px;overflow:hidden" set:html={p.mockupContent}></div>
+                  </div>
+                </div>
+              )}
+            </div>
+          </div>
+        </a>
+      ))}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,206 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navigation from '../../components/Navigation.astro';
+import Footer from '../../components/Footer.astro';
+
+const p = {
+  name: 'Konkani Music',
+  tagline: 'Cultural Music Streaming App',
+  category: 'Music · Mobile App',
+  year: '2024',
+  color: '#8b5cf6',
+  colorDark: '#1a0a3a',
+  tech: ['Flutter', 'Dart', 'Node.js', 'Firebase'],
+  overview: `Konkani Music is a dedicated streaming platform built for the Konkani-speaking community worldwide. It brings together traditional hymns, Marian songs, Lenten music and modern Konkani tunes in a beautifully crafted dark mobile app — giving the community access to their cultural music in one place.`,
+  challenge: `The Konkani music community had no dedicated platform — their music was scattered across YouTube, local CDs and WhatsApp groups with no organised access. The client needed an app that honoured the cultural aesthetic while feeling modern enough for everyday use.`,
+  solution: `We built a Flutter app with a rich dark purple aesthetic that feels premium and culturally resonant. The architecture supports categorised playlists, artist profiles, offline-capable playback and a continuously updated library. The app is published on both the App Store and Google Play Store.`,
+  results: [
+    { v: '5K+', l: 'Downloads' },
+    { v: '4.8★', l: 'App Rating' },
+    { v: '2', l: 'Platforms (iOS + Android)' },
+    { v: '100+', l: 'Songs in Library' },
+  ],
+  features: [
+    { title: 'Curated Playlists', desc: 'Hand-curated playlists for every occasion — Lent Hymns, Marian songs, Traditional Tunes, Latest Releases.' },
+    { title: 'Streaming & Offline', desc: 'Smooth audio streaming with offline download support for listening without internet.' },
+    { title: 'Artist Profiles', desc: 'Dedicated pages for Konkani artists and composers with their full discography.' },
+    { title: 'Category Browsing', desc: 'Browse by genre, occasion and mood — Traditional, Modern, Devotional, Folk.' },
+    { title: 'Now Playing', desc: 'Full-screen player with album art, playback controls, queue management and shuffle.' },
+    { title: 'Cross-Platform', desc: 'Single Flutter codebase published to both the Apple App Store and Google Play Store.' },
+  ],
+};
+---
+
+<Layout title={`${p.name} — Red Media Solutions`}>
+  <Navigation />
+  <main class="pt-[72px]">
+
+    <!-- Hero -->
+    <section class="relative min-h-[60vh] flex items-end overflow-hidden pb-16">
+      <div class="absolute inset-0" style={`background:linear-gradient(160deg,#0a0a0a 0%,${p.colorDark}70 50%,#0a0a0a 100%)`}></div>
+      <div class="absolute top-1/3 right-1/4 w-[500px] h-[500px] rounded-full blur-[180px] opacity-[0.18]" style={`background:${p.color}`}></div>
+      <div class="relative z-10 max-w-7xl mx-auto px-5 lg:px-10 w-full">
+        <a href="/#work" class="inline-flex items-center gap-2 text-white/40 hover:text-white transition-colors text-sm mb-8">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M13 7H1M6 2L1 7l5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Back to Work
+        </a>
+        <div class="reveal inline-flex items-center gap-2 px-3 py-1.5 rounded-full border mb-5" style={`border-color:${p.color}30;background:${p.color}15`}>
+          <span class="w-1.5 h-1.5 rounded-full" style={`background:${p.color}`}></span>
+          <span class="text-[11px] font-medium" style={`color:${p.color}`}>{p.category} · {p.year}</span>
+        </div>
+        <h1 class="reveal reveal-delay-1 font-display font-extrabold text-[clamp(3rem,8vw,6.5rem)] text-white leading-[.9] tracking-tight mb-4">{p.name}</h1>
+        <p class="reveal reveal-delay-2 text-white/50 text-lg md:text-xl max-w-xl leading-relaxed">{p.tagline}</p>
+        <div class="reveal reveal-delay-3 flex flex-wrap gap-2 mt-8">
+          {p.tech.map(t => <span class="px-3 py-1.5 text-[11.5px] text-white/40 bg-white/[0.05] border border-white/[0.08] rounded-full">{t}</span>)}
+        </div>
+      </div>
+    </section>
+
+    <!-- Results strip -->
+    <section class="border-y border-white/[0.06] bg-[#0d0d0d]">
+      <div class="max-w-7xl mx-auto px-5 lg:px-10">
+        <div class="grid grid-cols-2 md:grid-cols-4 divide-x divide-white/[0.06]">
+          {p.results.map((r,i) => (
+            <div class={`reveal reveal-delay-${i+1} p-8 text-center`}>
+              <div class="font-display font-extrabold text-3xl md:text-4xl mb-1" style={`color:${p.color}`}>{r.v}</div>
+              <div class="text-[11px] text-white/35 uppercase tracking-widest">{r.l}</div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Phone mockup trio -->
+    <section class="py-20 bg-[#0a0a0a]">
+      <div class="max-w-5xl mx-auto px-5 lg:px-10">
+        <div class="reveal flex flex-col md:flex-row items-center justify-center gap-6">
+
+          <!-- Screen 1: Home -->
+          <div class="phone-mockup w-[200px] h-[400px] flex-shrink-0 overflow-hidden" style={`box-shadow:0 40px 80px ${p.color}25`}>
+            <div style="font-family:-apple-system,sans-serif;font-size:10px;background:linear-gradient(160deg,#1a0a2e 0%,#0d0520 100%);height:100%;padding:18px 14px;color:#fff;overflow:hidden">
+              <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:14px">
+                <div style="display:flex;align-items:center;gap:6px">
+                  <div style="width:22px;height:22px;background:linear-gradient(135deg,#8b5cf6,#ec4899);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:800;color:#fff">K</div>
+                  <span style="color:#b794f4;font-size:11px;font-weight:700">Konkani Music</span>
+                </div>
+                <span style="font-size:13px">🔍</span>
+              </div>
+              <div style="font-size:12px;font-weight:700;margin-bottom:8px">Playlist for You</div>
+              <div style="display:grid;grid-template-columns:1fr 1fr;gap:7px;margin-bottom:12px">
+                <div style="background:linear-gradient(135deg,#7c3aed,#4f46e5);border-radius:10px;padding:10px;height:70px;display:flex;align-items:flex-end"><div style="font-size:8px;font-weight:600">Lent Hymns</div></div>
+                <div style="background:linear-gradient(135deg,#d97706,#b45309);border-radius:10px;padding:10px;height:70px;display:flex;align-items:flex-end"><div style="font-size:8px;font-weight:600">Marian Hymns</div></div>
+              </div>
+              <div style="font-size:10px;font-weight:700;margin-bottom:7px">Categories for You</div>
+              <div style="background:rgba(255,255,255,.06);border:1px solid rgba(139,92,246,.3);border-radius:8px;padding:7px;margin-bottom:5px;display:flex;align-items:center;gap:7px">
+                <div style="width:28px;height:28px;background:linear-gradient(135deg,#8b5cf6,#ec4899);border-radius:6px;flex-shrink:0"></div>
+                <div><div style="font-weight:600;font-size:9px">Traditional & Modern</div><div style="color:rgba(255,255,255,.45);font-size:8px">24 songs</div></div>
+              </div>
+              <div style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:8px;padding:7px;display:flex;align-items:center;gap:7px">
+                <div style="width:28px;height:28px;background:linear-gradient(135deg,#f59e0b,#ef4444);border-radius:6px;flex-shrink:0"></div>
+                <div><div style="font-weight:600;font-size:9px">Latest Releases</div><div style="color:rgba(255,255,255,.45);font-size:8px">12 songs</div></div>
+              </div>
+              <div style="margin-top:10px;background:rgba(139,92,246,.25);border:1px solid rgba(139,92,246,.5);border-radius:8px;padding:7px;display:flex;align-items:center;justify-content:space-between">
+                <div style="display:flex;align-items:center;gap:6px">
+                  <div style="width:22px;height:22px;background:linear-gradient(135deg,#8b5cf6,#4f46e5);border-radius:4px"></div>
+                  <div><div style="font-size:8px;font-weight:600">Khursa Savlent</div><div style="font-size:7px;opacity:.6">Walter D'Souza</div></div>
+                </div>
+                <div style="font-size:14px">⏸</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Screen 2: Playlist detail -->
+          <div class="phone-mockup w-[200px] h-[400px] flex-shrink-0 overflow-hidden md:-mt-8 z-10" style={`box-shadow:0 50px 100px ${p.color}30`}>
+            <div style="font-family:-apple-system,sans-serif;font-size:10px;background:linear-gradient(160deg,#1a0a2e 0%,#0d0520 100%);height:100%;padding:18px 14px;color:#fff;overflow:hidden">
+              <div style="display:flex;align-items:center;gap:6px;margin-bottom:12px">
+                <span style="font-size:12px">←</span>
+                <span style="font-size:11px;font-weight:700">Playlist</span>
+              </div>
+              <div style="background:linear-gradient(135deg,#7c3aed,#4f46e5);border-radius:12px;height:100px;margin-bottom:10px;display:flex;align-items:center;justify-content:center;font-size:28px">🎵</div>
+              <div style="font-weight:700;font-size:12px;text-align:center;margin-bottom:2px">Lent Hymns</div>
+              <div style="color:rgba(255,255,255,.5);font-size:9px;text-align:center;margin-bottom:12px">18 songs · 1hr 12min</div>
+              <div style="display:flex;justify-content:space-around;margin-bottom:12px;font-size:18px">
+                <span>⏮</span><span style="width:30px;height:30px;background:#8b5cf6;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px">⏸</span><span>⏭</span>
+              </div>
+              ${['Khursa Savlent · 4:12','Alleluia Alleluia · 3:47','Noxib Hanv · 5:01','Mog Kortam · 3:22'].map((s,si)=>`
+              <div style="display:flex;align-items:center;justify-content:space-between;padding:5px 0;border-bottom:1px solid rgba(255,255,255,.06)">
+                <div style="display:flex;align-items:center;gap:6px">
+                  <div style="width:18px;height:18px;background:rgba(139,92,246,.3);border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:7px">${si+1}</div>
+                  <div><div style="font-size:9px;font-weight:500">${s.split('·')[0].trim()}</div><div style="font-size:7px;opacity:.5">${s.split('·')[1]?.trim()}</div></div>
+                </div>
+              </div>`).join('')}
+            </div>
+          </div>
+
+          <!-- Screen 3: Latest releases -->
+          <div class="phone-mockup w-[200px] h-[400px] flex-shrink-0 overflow-hidden" style={`box-shadow:0 40px 80px ${p.color}20`}>
+            <div style="font-family:-apple-system,sans-serif;font-size:10px;background:linear-gradient(160deg,#1a0a2e 0%,#0d0520 100%);height:100%;padding:18px 14px;color:#fff;overflow:hidden">
+              <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px">
+                <span style="font-size:11px;font-weight:700;color:#b794f4">Albums</span>
+                <span style="font-size:9px;color:#8b5cf6">See all</span>
+              </div>
+              <div style="font-size:12px;font-weight:700;margin-bottom:4px">Latest Releases</div>
+              <div style="color:rgba(255,255,255,.5);font-size:9px;margin-bottom:10px">Newly released albums</div>
+              <div style="background:linear-gradient(135deg,#7c3aed,#1e1b4b);border-radius:10px;padding:12px;margin-bottom:8px">
+                <div style="font-size:9px;opacity:.7;margin-bottom:3px">NEW RELEASE</div>
+                <div style="font-size:11px;font-weight:700">ಖುರ್ಸಾ ಸಾವ್ಳೆಂತ್</div>
+                <div style="font-size:8px;opacity:.6;margin-top:2px">Konkani Lenten Hymns</div>
+                <div style="margin-top:8px;font-size:8px;opacity:.7">KHURSA SAVLENT</div>
+              </div>
+              <div style="font-size:10px;font-weight:700;margin-bottom:7px">Trending Albums</div>
+              ${[
+                {t:'Marian Hymns',a:'Fr. Alfred Mascarenhas',c:'#7c3aed'},
+                {t:'Konkani Folk Songs',a:'Traditional Artists',c:'#d97706'},
+                {t:'Youth Worship',a:'Konkani Youth Choir',c:'#0d9488'},
+              ].map(al=>`<div style="display:flex;align-items:center;gap:7px;margin-bottom:6px">
+                <div style="width:28px;height:28px;background:linear-gradient(135deg,${al.c},#1a1a2e);border-radius:6px;flex-shrink:0"></div>
+                <div style="flex:1"><div style="font-size:9px;font-weight:600">${al.t}</div><div style="font-size:8px;opacity:.5">${al.a}</div></div>
+                <span style="font-size:11px;opacity:.4">▶</span>
+              </div>`).join('')}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Content -->
+    <section class="py-20 bg-[#080808] border-t border-white/[0.04]">
+      <div class="max-w-7xl mx-auto px-5 lg:px-10">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <div class="reveal"><h2 class="font-display font-bold text-2xl text-white mb-4">Project Overview</h2><p class="text-white/50 text-[15px] leading-relaxed">{p.overview}</p></div>
+          <div class="reveal reveal-delay-2"><h2 class="font-display font-bold text-2xl text-white mb-4">The Challenge</h2><p class="text-white/50 text-[15px] leading-relaxed">{p.challenge}</p></div>
+        </div>
+        <div class="reveal reveal-delay-3 mt-12"><h2 class="font-display font-bold text-2xl text-white mb-4">Our Solution</h2><p class="text-white/50 text-[15px] leading-relaxed max-w-3xl">{p.solution}</p></div>
+      </div>
+    </section>
+
+    <section class="py-20 bg-[#0a0a0a]">
+      <div class="max-w-7xl mx-auto px-5 lg:px-10">
+        <h2 class="reveal font-display font-bold text-3xl text-white mb-10">Key Features</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 stagger">
+          {p.features.map(f => (
+            <div class="reveal card-hover p-6 rounded-2xl border border-white/[0.06] bg-white/[0.02] group cursor-default">
+              <div class="w-10 h-10 rounded-xl mb-4 flex items-center justify-center" style={`background:${p.color}14;border:1px solid ${p.color}25`}>
+                <div class="w-2 h-2 rounded-full" style={`background:${p.color}`}></div>
+              </div>
+              <h3 class="font-display font-semibold text-white mb-2 group-hover:text-[#e5173f] transition-colors">{f.title}</h3>
+              <p class="text-white/45 text-sm leading-relaxed">{f.desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20 bg-[#080808] border-t border-white/[0.04]">
+      <div class="max-w-2xl mx-auto px-5 text-center reveal">
+        <h2 class="font-display font-extrabold text-3xl md:text-4xl text-white mb-4">Need something like this?</h2>
+        <p class="text-white/45 text-base mb-8 leading-relaxed">We build custom platforms tailored to your business. Let's talk about your project.</p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="/#contact" class="btn-primary px-7 py-3.5">Start a Project</a>
+          <a href="/#work" class="btn-outline px-7 py-3.5">View More Work</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>

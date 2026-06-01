@@ -1,0 +1,226 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navigation from '../../components/Navigation.astro';
+import Footer from '../../components/Footer.astro';
+
+const project = {
+  name: 'HRCRM',
+  tagline: 'HR & Payroll Management Platform',
+  category: 'HRTech · SaaS',
+  year: '2025',
+  color: '#2dd4bf',
+  colorDark: '#0a3a38',
+  tech: ['Next.js', 'Node.js', 'MariaDB', 'AWS'],
+  overview: `HRCRM is a comprehensive human resources management SaaS designed for growing organisations. It centralises staff management, payroll processing, attendance tracking and financial assistance loans in a single, clean interface — eliminating the need for multiple disconnected tools.`,
+  challenge: `The client was running HR operations across spreadsheets, WhatsApp and a legacy payroll tool. Data was fragmented, attendance was tracked manually, and loan management was done entirely on paper. They needed a unified platform that non-technical HR staff could use without training.`,
+  solution: `We built a multi-module SaaS with an intuitive sidebar navigation separating Staff, Payroll, Attendance, and Reports. Each module was designed with clarity first — data tables with smart filters, inline editing and bulk operations. The payroll module handles salary disbursements and tracks outstanding employee loans with automatic deduction scheduling.`,
+  results: [
+    { v: '5+', l: 'Departments Managed' },
+    { v: 'Real-time', l: 'Attendance Tracking' },
+    { v: '₹10K+', l: 'Loans Portfolio' },
+    { v: '99.8%', l: 'Collection Rate' },
+  ],
+  features: [
+    { title: 'Staff Directory', desc: 'Searchable employee registry with department filters, active/inactive status and full profile management.' },
+    { title: 'Payroll Processing', desc: 'Automated salary calculations with deduction tracking, disbursement history and monthly reports.' },
+    { title: 'Attendance Tracking', desc: 'Real-time attendance with department-wise views, shift management and absence tracking.' },
+    { title: 'Financial Assistance', desc: 'Employee loan management with outstanding balance tracking, repayment schedules and deduction history.' },
+    { title: 'Reports & Analytics', desc: 'Exportable reports for payroll, attendance and loan portfolios across any date range.' },
+    { title: 'Multi-Department', desc: 'Separate views for Counselling, Field Work, Media, Worship and other departmental groupings.' },
+  ],
+};
+---
+
+<Layout title={`${project.name} — Red Media Solutions`}>
+  <Navigation />
+  <main class="pt-[72px]">
+
+    <!-- Hero -->
+    <section class="relative min-h-[60vh] flex items-end overflow-hidden pb-16">
+      <div class="absolute inset-0" style={`background: linear-gradient(160deg, #0a0a0a 0%, ${project.colorDark}40 50%, #0a0a0a 100%)`}></div>
+      <div class="absolute top-1/3 right-1/4 w-[500px] h-[500px] rounded-full blur-[180px] opacity-[0.12]" style={`background:${project.color}`}></div>
+
+      <div class="relative z-10 max-w-7xl mx-auto px-5 lg:px-10 w-full">
+        <a href="/#work" class="inline-flex items-center gap-2 text-white/40 hover:text-white transition-colors text-sm mb-8">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M13 7H1M6 2L1 7l5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Back to Work
+        </a>
+        <div class="reveal inline-flex items-center gap-2 px-3 py-1.5 rounded-full border mb-5" style={`border-color:${project.color}30;background:${project.color}12`}>
+          <span class="w-1.5 h-1.5 rounded-full" style={`background:${project.color}`}></span>
+          <span class="text-[11px] font-medium" style={`color:${project.color}`}>{project.category} · {project.year}</span>
+        </div>
+        <h1 class="reveal reveal-delay-1 font-display font-extrabold text-[clamp(3rem,8vw,6.5rem)] text-white leading-[.9] tracking-tight mb-4">{project.name}</h1>
+        <p class="reveal reveal-delay-2 text-white/50 text-lg md:text-xl max-w-xl leading-relaxed">{project.tagline}</p>
+        <div class="reveal reveal-delay-3 flex flex-wrap gap-2 mt-8">
+          {project.tech.map(t => <span class="px-3 py-1.5 text-[11.5px] text-white/40 bg-white/[0.05] border border-white/[0.08] rounded-full">{t}</span>)}
+        </div>
+      </div>
+    </section>
+
+    <!-- Results strip -->
+    <section class="border-y border-white/[0.06] bg-[#0d0d0d]">
+      <div class="max-w-7xl mx-auto px-5 lg:px-10">
+        <div class="grid grid-cols-2 md:grid-cols-4 divide-x divide-white/[0.06]">
+          {project.results.map((r,i) => (
+            <div class={`reveal reveal-delay-${i+1} p-8 text-center`}>
+              <div class="font-display font-extrabold text-3xl md:text-4xl mb-1" style={`color:${project.color}`}>{r.v}</div>
+              <div class="text-[11px] text-white/35 uppercase tracking-widest">{r.l}</div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Desktop mockup showcase -->
+    <section class="py-20 bg-[#0a0a0a]">
+      <div class="max-w-7xl mx-auto px-5 lg:px-10 space-y-8">
+
+        <!-- Staff Directory mockup -->
+        <div class="reveal">
+          <div class="desktop-mockup max-w-5xl mx-auto" style={`box-shadow:0 40px 120px ${project.color}18`}>
+            <div class="desktop-mockup-bar">
+              <div class="desktop-mockup-dot" style="background:#ef4444"></div>
+              <div class="desktop-mockup-dot" style="background:#f59e0b"></div>
+              <div class="desktop-mockup-dot" style="background:#22c55e"></div>
+              <div class="flex-1 mx-4"><div class="bg-[#111] rounded px-3 py-1 text-[10px] text-white/20 w-44">hrcrm.app/staff</div></div>
+            </div>
+            <div style="height:400px;background:#f5f5f5;display:flex;overflow:hidden;font-family:-apple-system,sans-serif">
+              <div style="width:180px;background:#fff;border-right:1px solid #eee;padding:14px 0;flex-shrink:0">
+                <div style="padding:0 14px 12px;border-bottom:1px solid #eee;margin-bottom:8px">
+                  <div style="font-weight:700;color:#1a1a1a;font-size:12px">The Workplace</div>
+                  <div style="color:#999;font-size:9px">HR Administration</div>
+                </div>
+                <div style="padding:0 10px">
+                  <div style="padding:6px 8px;border-radius:6px;background:#f0fdfa;color:#0d9488;font-weight:600;margin-bottom:2px;font-size:11px;display:flex;align-items:center;gap:6px"><span>👥</span>Staff</div>
+                  <div style="padding:6px 8px;color:#777;font-size:11px;margin-bottom:2px;display:flex;align-items:center;gap:6px"><span>💰</span>Payroll</div>
+                  <div style="padding:6px 8px;color:#777;font-size:11px;margin-bottom:2px;display:flex;align-items:center;gap:6px"><span>📅</span>Attendance</div>
+                  <div style="padding:6px 8px;color:#777;font-size:11px;display:flex;align-items:center;gap:6px"><span>📊</span>Reports</div>
+                </div>
+              </div>
+              <div style="flex:1;padding:18px;overflow:hidden">
+                <div style="font-size:16px;font-weight:700;color:#1a1a1a;margin-bottom:3px">Staff Directory</div>
+                <div style="color:#aaa;font-size:10px;margin-bottom:12px">Manage your global workforce, roles, and departmental access</div>
+                <div style="display:flex;gap:6px;margin-bottom:12px">
+                  ${['All','Counselling','Field Work','Media','Worship'].map((d,di)=>`<div style="padding:3px 10px;background:${di===0?'#0d9488':'#f1f5f9'};color:${di===0?'#fff':'#666'};border-radius:20px;font-size:9px;font-weight:${di===0?'600':'400'}">${d}</div>`).join('')}
+                </div>
+                <div style="background:#fff;border:1px solid #eee;border-radius:8px;overflow:hidden;box-shadow:0 1px 3px rgba(0,0,0,.04)">
+                  <div style="display:grid;grid-template-columns:1.5fr 1fr 0.8fr 1.8fr 1.2fr;gap:4px;padding:7px 12px;background:#f8fafc;border-bottom:1px solid #eee;color:#aaa;font-size:8px;text-transform:uppercase;letter-spacing:.05em">
+                    <div>Employee</div><div>Position</div><div>Status</div><div>Email</div><div>Phone</div>
+                  </div>
+                  ${[
+                    {n:'John',e:'john@gmail.com',p:'9876543211'},
+                    {n:'Keerthan',e:'k@gmail.com',p:'9876543321'},
+                    {n:'Edison',e:'joshuapaul@gmail.com',p:'+91 9591591783'},
+                    {n:'Sujay Kumar',e:'sujay@gmail.com',p:'+91 9876543210'},
+                  ].map(emp=>`<div style="display:grid;grid-template-columns:1.5fr 1fr 0.8fr 1.8fr 1.2fr;gap:4px;padding:8px 12px;border-bottom:1px solid #f5f5f5;align-items:center">
+                    <div style="display:flex;align-items:center;gap:6px">
+                      <div style="width:22px;height:22px;background:linear-gradient(135deg,#2dd4bf,#0d9488);border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:8px;font-weight:700;flex-shrink:0">${emp.n[0]}</div>
+                      <span style="font-weight:600;color:#1a1a1a;font-size:10px">${emp.n}</span>
+                    </div>
+                    <div style="color:#666;font-size:10px">Employee</div>
+                    <div><span style="background:#e6f9f0;color:#14b866;padding:1px 6px;border-radius:8px;font-size:8px">Active</span></div>
+                    <div style="color:#888;font-size:9px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${emp.e}</div>
+                    <div style="color:#888;font-size:9px">${emp.p}</div>
+                  </div>`).join('')}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Payroll mockup -->
+        <div class="reveal reveal-delay-2">
+          <div class="desktop-mockup max-w-5xl mx-auto" style={`box-shadow:0 30px 80px ${project.color}10`}>
+            <div class="desktop-mockup-bar">
+              <div class="desktop-mockup-dot" style="background:#ef4444"></div>
+              <div class="desktop-mockup-dot" style="background:#f59e0b"></div>
+              <div class="desktop-mockup-dot" style="background:#22c55e"></div>
+              <div class="flex-1 mx-4"><div class="bg-[#111] rounded px-3 py-1 text-[10px] text-white/20 w-44">hrcrm.app/payroll</div></div>
+            </div>
+            <div style="height:360px;background:#f5f5f5;display:flex;overflow:hidden;font-family:-apple-system,sans-serif">
+              <div style="width:180px;background:#fff;border-right:1px solid #eee;padding:14px 0;flex-shrink:0">
+                <div style="padding:0 14px 12px;border-bottom:1px solid #eee;margin-bottom:8px">
+                  <div style="font-weight:700;color:#1a1a1a;font-size:12px">The Workplace</div>
+                  <div style="color:#999;font-size:9px">HR Administration</div>
+                </div>
+                <div style="padding:0 10px">
+                  <div style="padding:6px 8px;color:#777;font-size:11px;margin-bottom:2px;display:flex;align-items:center;gap:6px"><span>👥</span>Staff</div>
+                  <div style="padding:6px 8px;border-radius:6px;background:#f0fdfa;color:#0d9488;font-weight:600;margin-bottom:2px;font-size:11px;display:flex;align-items:center;gap:6px"><span>💰</span>Payroll</div>
+                  <div style="padding:6px 8px;color:#777;font-size:11px;margin-bottom:2px;display:flex;align-items:center;gap:6px"><span>📅</span>Attendance</div>
+                  <div style="padding:6px 8px;color:#777;font-size:11px;display:flex;align-items:center;gap:6px"><span>📊</span>Reports</div>
+                </div>
+              </div>
+              <div style="flex:1;padding:18px;overflow:hidden">
+                <div style="font-size:15px;font-weight:700;color:#1a1a1a;margin-bottom:3px">Payroll & Financial Assistance</div>
+                <div style="color:#aaa;font-size:9px;margin-bottom:14px">Track repayment schedules and payroll deductions</div>
+                <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:14px">
+                  <div style="background:#fff;border:1px solid #eee;border-radius:8px;padding:11px"><div style="color:#aaa;font-size:8px;margin-bottom:3px">Portfolio Outstanding</div><div style="font-size:16px;font-weight:700;color:#1a1a1a">₹10,000.00</div></div>
+                  <div style="background:#fff;border:1px solid #eee;border-radius:8px;padding:11px"><div style="color:#aaa;font-size:8px;margin-bottom:3px">Active Deductions</div><div style="font-size:16px;font-weight:700;color:#1a1a1a">1</div></div>
+                  <div style="background:#fff;border:1px solid #eee;border-radius:8px;padding:11px"><div style="color:#aaa;font-size:8px;margin-bottom:3px">Collection Rate</div><div style="font-size:16px;font-weight:700;color:#0d9488">99.8%</div></div>
+                </div>
+                <div style="font-size:12px;font-weight:600;color:#1a1a1a;margin-bottom:8px">Active Loan Portfolio</div>
+                <div style="background:#fff;border:1px solid #eee;border-radius:8px;overflow:hidden">
+                  <div style="display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:4px;padding:6px 12px;background:#f8fafc;border-bottom:1px solid #eee;color:#aaa;font-size:8px;text-transform:uppercase;letter-spacing:.04em">
+                    <div>Employee</div><div>Total Loan</div><div>Deducted</div><div>Outstanding</div>
+                  </div>
+                  ${[{n:'Sujay Kumar',t:'₹10,000.00',d:'₹0.00',o:'₹10,000.00'},{n:'Edison',t:'₹0.00',d:'₹0.00',o:'₹0.00'},{n:'Keerthan',t:'₹0.00',d:'₹0.00',o:'₹0.00'}].map(l=>`
+                  <div style="display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:4px;padding:7px 12px;border-bottom:1px solid #f5f5f5;align-items:center">
+                    <div style="display:flex;align-items:center;gap:6px">
+                      <div style="width:20px;height:20px;background:linear-gradient(135deg,#2dd4bf,#0d9488);border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:7px;font-weight:700;flex-shrink:0">${l.n[0]}</div>
+                      <span style="font-size:10px;font-weight:500;color:#1a1a1a">${l.n}</span>
+                    </div>
+                    <div style="font-size:10px;color:#555">${l.t}</div>
+                    <div style="font-size:10px;color:#555">${l.d}</div>
+                    <div style="font-size:10px;color:${l.o==='₹0.00'?'#aaa':'#ef4444'};font-weight:600">${l.o}</div>
+                  </div>`).join('')}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Content -->
+    <section class="py-20 bg-[#080808] border-t border-white/[0.04]">
+      <div class="max-w-7xl mx-auto px-5 lg:px-10">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <div class="reveal"><h2 class="font-display font-bold text-2xl text-white mb-4">Project Overview</h2><p class="text-white/50 text-[15px] leading-relaxed">{project.overview}</p></div>
+          <div class="reveal reveal-delay-2"><h2 class="font-display font-bold text-2xl text-white mb-4">The Challenge</h2><p class="text-white/50 text-[15px] leading-relaxed">{project.challenge}</p></div>
+        </div>
+        <div class="reveal reveal-delay-3 mt-12"><h2 class="font-display font-bold text-2xl text-white mb-4">Our Solution</h2><p class="text-white/50 text-[15px] leading-relaxed max-w-3xl">{project.solution}</p></div>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section class="py-20 bg-[#0a0a0a]">
+      <div class="max-w-7xl mx-auto px-5 lg:px-10">
+        <h2 class="reveal font-display font-bold text-3xl text-white mb-10">Key Features</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 stagger">
+          {project.features.map(f => (
+            <div class="reveal card-hover p-6 rounded-2xl border border-white/[0.06] bg-white/[0.02] group cursor-default">
+              <div class="w-10 h-10 rounded-xl mb-4 flex items-center justify-center" style={`background:${project.color}14;border:1px solid ${project.color}25`}>
+                <div class="w-2 h-2 rounded-full" style={`background:${project.color}`}></div>
+              </div>
+              <h3 class="font-display font-semibold text-white mb-2 group-hover:text-[#e5173f] transition-colors">{f.title}</h3>
+              <p class="text-white/45 text-sm leading-relaxed">{f.desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-20 bg-[#080808] border-t border-white/[0.04]">
+      <div class="max-w-2xl mx-auto px-5 text-center reveal">
+        <h2 class="font-display font-extrabold text-3xl md:text-4xl text-white mb-4">Need something like this?</h2>
+        <p class="text-white/45 text-base mb-8 leading-relaxed">We build custom platforms tailored to your business. Let's talk about your project.</p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="/#contact" class="btn-primary px-7 py-3.5">Start a Project</a>
+          <a href="/#work" class="btn-outline px-7 py-3.5">View More Work</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>

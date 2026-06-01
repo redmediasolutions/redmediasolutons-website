@@ -1,0 +1,217 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navigation from '../../components/Navigation.astro';
+import Footer from '../../components/Footer.astro';
+
+const p = {
+  name: 'SalesCRM',
+  tagline: 'Inventory & Stock Management SaaS',
+  category: 'Inventory · SaaS',
+  year: '2025',
+  color: '#f59e0b',
+  colorDark: '#3a2a0a',
+  tech: ['Next.js', 'Node.js', 'MariaDB', 'AWS'],
+  overview: `SalesCRM is a dark-mode-first inventory and stock management SaaS built for electronics resellers and multi-vendor businesses. It gives teams a single source of truth for every product — tracking purchase details, vendor info, serial numbers, stock condition, and sale status in a fast, searchable interface.`,
+  challenge: `The client was tracking hundreds of laptop and computer units across multiple vendor sources using physical ledgers and Excel sheets. There was no visibility into which units were sold, which were in stock, or what the margin was on any given item. Errors were common and audits were a nightmare.`,
+  solution: `We built a dark-mode SaaS with a product-first data model. Every stock entry captures the full product lifecycle — from vendor name and purchase date to serial number, condition grade, cost price and sale price. Status badges (In Stock / Sold) update in real time. Powerful search and column filters make it instant to find any unit in the inventory.`,
+  results: [
+    { v: '1000+', l: 'SKUs Tracked' },
+    { v: 'Multi-vendor', l: 'Support' },
+    { v: 'Real-time', l: 'Stock Status' },
+    { v: 'Dark-mode', l: 'First Design' },
+  ],
+  features: [
+    { title: 'Stock Listings', desc: 'Full product registry with brand, model, serial number, vendor, cost, sale price and condition grade per unit.' },
+    { title: 'Status Tracking', desc: 'Real-time In Stock / Sold badges that update instantly — no more manual reconciliation.' },
+    { title: 'Vendor Management', desc: 'Track which vendor supplied each unit with purchase dates for full audit trails.' },
+    { title: 'Powerful Search', desc: 'Instant full-text search across all fields — find any unit by name, serial or vendor in milliseconds.' },
+    { title: 'Condition Grading', desc: 'Grade each unit (A++, A+, A, B) so buyers and staff know exact product condition at a glance.' },
+    { title: 'Add Stock Flow', desc: 'Clean form for adding new stock entries with all required fields validated before submission.' },
+  ],
+};
+---
+
+<Layout title={`${p.name} — Red Media Solutions`}>
+  <Navigation />
+  <main class="pt-[72px]">
+
+    <!-- Hero -->
+    <section class="relative min-h-[60vh] flex items-end overflow-hidden pb-16">
+      <div class="absolute inset-0" style={`background:linear-gradient(160deg,#0a0a0a 0%,${p.colorDark}50 50%,#0a0a0a 100%)`}></div>
+      <div class="absolute inset-0 opacity-[0.02]" style="background-image:linear-gradient(rgba(245,158,11,.4) 1px,transparent 1px),linear-gradient(90deg,rgba(245,158,11,.4) 1px,transparent 1px);background-size:60px 60px"></div>
+      <div class="absolute top-1/3 right-1/4 w-[500px] h-[500px] rounded-full blur-[180px] opacity-[0.14]" style={`background:${p.color}`}></div>
+      <div class="relative z-10 max-w-7xl mx-auto px-5 lg:px-10 w-full">
+        <a href="/#work" class="inline-flex items-center gap-2 text-white/40 hover:text-white transition-colors text-sm mb-8">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M13 7H1M6 2L1 7l5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Back to Work
+        </a>
+        <div class="reveal inline-flex items-center gap-2 px-3 py-1.5 rounded-full border mb-5" style={`border-color:${p.color}30;background:${p.color}12`}>
+          <span class="w-1.5 h-1.5 rounded-full" style={`background:${p.color}`}></span>
+          <span class="text-[11px] font-medium" style={`color:${p.color}`}>{p.category} · {p.year}</span>
+        </div>
+        <h1 class="reveal reveal-delay-1 font-display font-extrabold text-[clamp(3rem,8vw,6.5rem)] text-white leading-[.9] tracking-tight mb-4">{p.name}</h1>
+        <p class="reveal reveal-delay-2 text-white/50 text-lg md:text-xl max-w-xl leading-relaxed">{p.tagline}</p>
+        <div class="reveal reveal-delay-3 flex flex-wrap gap-2 mt-8">
+          {p.tech.map(t => <span class="px-3 py-1.5 text-[11.5px] text-white/40 bg-white/[0.05] border border-white/[0.08] rounded-full">{t}</span>)}
+        </div>
+      </div>
+    </section>
+
+    <!-- Results strip -->
+    <section class="border-y border-white/[0.06] bg-[#0d0d0d]">
+      <div class="max-w-7xl mx-auto px-5 lg:px-10">
+        <div class="grid grid-cols-2 md:grid-cols-4 divide-x divide-white/[0.06]">
+          {p.results.map((r,i) => (
+            <div class={`reveal reveal-delay-${i+1} p-8 text-center`}>
+              <div class="font-display font-extrabold text-3xl md:text-4xl mb-1" style={`color:${p.color}`}>{r.v}</div>
+              <div class="text-[11px] text-white/35 uppercase tracking-widest">{r.l}</div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Mockup showcase -->
+    <section class="py-20 bg-[#0a0a0a]">
+      <div class="max-w-7xl mx-auto px-5 lg:px-10 space-y-8">
+
+        <!-- Main stocks table -->
+        <div class="reveal">
+          <div class="desktop-mockup max-w-5xl mx-auto" style={`box-shadow:0 40px 120px ${p.color}18`}>
+            <div class="desktop-mockup-bar">
+              <div class="desktop-mockup-dot" style="background:#ef4444"></div>
+              <div class="desktop-mockup-dot" style="background:#f59e0b"></div>
+              <div class="desktop-mockup-dot" style="background:#22c55e"></div>
+              <div class="flex-1 mx-4"><div class="bg-[#0d0d0d] rounded px-3 py-1 text-[10px] text-white/20 w-40">salescrm.app/stocks</div></div>
+            </div>
+            <div style="height:420px;background:#111;display:flex;overflow:hidden;font-family:-apple-system,sans-serif;color:#e0e0e0">
+              <!-- Sidebar -->
+              <div style="width:50px;background:#0d0d0d;border-right:1px solid #1e1e1e;display:flex;flex-direction:column;align-items:center;padding:14px 0;gap:14px;flex-shrink:0">
+                <div style="width:28px;height:28px;background:#f59e0b;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;color:#000">S</div>
+                <div style="width:20px;height:20px;background:#1a2a1a;border-radius:4px"></div>
+                <div style="width:20px;height:20px;background:#1e1e1e;border-radius:4px"></div>
+                <div style="width:20px;height:20px;background:#1e1e1e;border-radius:4px"></div>
+                <div style="width:20px;height:20px;background:#1e1e1e;border-radius:4px"></div>
+              </div>
+              <!-- Main content -->
+              <div style="flex:1;display:flex;flex-direction:column;overflow:hidden">
+                <div style="padding:10px 16px;border-bottom:1px solid #1e1e1e;display:flex;align-items:center;gap:10px;flex-shrink:0">
+                  <span style="font-size:15px;font-weight:700">Stocks</span>
+                  <div style="background:#f59e0b;color:#000;padding:3px 10px;border-radius:12px;font-size:9px;font-weight:700">+ Add Stock</div>
+                  <div style="flex:1"></div>
+                  <div style="background:#1a1a1a;border:1px solid #2a2a2a;border-radius:6px;padding:4px 12px;color:#555;font-size:9px">🔍 Search product, vendor, serial…</div>
+                </div>
+                <!-- Table header -->
+                <div style="display:grid;grid-template-columns:2.2fr 1.1fr 1.3fr 0.8fr 0.8fr 0.8fr 0.9fr;gap:4px;padding:6px 16px;background:#0d0d0d;border-bottom:1px solid #1e1e1e;color:#444;font-size:8px;text-transform:uppercase;letter-spacing:.05em;flex-shrink:0">
+                  <div>Brand / Model</div><div>Serial No.</div><div>Vendor</div><div>Cost</div><div>Sale</div><div>Condition</div><div>Status</div>
+                </div>
+                <!-- Rows -->
+                <div style="overflow-y:auto;flex:1">
+                  {[
+                    {b:'Macbook Pro M1 (2021)',s:'UPC-M1-001',v:'Lekhup International',c:'₹82,000',sp:'₹98,000',g:'A++',st:'In Stock',sc:'#14b866'},
+                    {b:'Dell OptiPlex 3050',s:'4B59RD',v:'Trafa International',c:'₹22,146',sp:'₹24,000',g:'A+',st:'In Stock',sc:'#14b866'},
+                    {b:'Dell OptiPlex 5060',s:'5Z9PL3',v:'Trafa International',c:'₹28,108',sp:'₹32,000',g:'A',st:'Sold',sc:'#ef4444'},
+                    {b:'Dell Latitude 7480',s:'DACW2T',v:'Shima Kumar',c:'₹41,450',sp:'₹48,000',g:'A+',st:'Sold',sc:'#ef4444'},
+                    {b:'Dell Latitude 7490',s:'8BM0J7',v:'Shima Kumar',c:'₹42,500',sp:'₹50,000',g:'A++',st:'In Stock',sc:'#14b866'},
+                    {b:'DELL F425',s:'B78N40',v:'Shima Kumar',c:'₹77,837',sp:'₹88,000',g:'A',st:'Sold',sc:'#ef4444'},
+                    {b:'DELL F425 (16GB)',s:'C12G84',v:'Shima Kumar',c:'₹79,400',sp:'₹91,000',g:'A+',st:'In Stock',sc:'#14b866'},
+                  ].map(r => `
+                  <div style="display:grid;grid-template-columns:2.2fr 1.1fr 1.3fr 0.8fr 0.8fr 0.8fr 0.9fr;gap:4px;padding:8px 16px;border-bottom:1px solid #161616;align-items:center">
+                    <div style="font-weight:500;font-size:10px;color:#ddd;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${r.b}</div>
+                    <div style="color:#555;font-size:9px;font-family:monospace">${r.s}</div>
+                    <div style="color:#777;font-size:9px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${r.v}</div>
+                    <div style="color:#888;font-size:9px">${r.c}</div>
+                    <div style="color:#f59e0b;font-size:9px;font-weight:600">${r.sp}</div>
+                    <div><span style="background:#1a2a1a;color:#4ade80;padding:2px 6px;border-radius:5px;font-size:8px;font-weight:600">${r.g}</span></div>
+                    <div><span style="padding:2px 7px;border-radius:8px;font-size:8px;font-weight:600;background:${r.sc}20;color:${r.sc}">${r.st}</span></div>
+                  </div>`).join('')}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Laptop mockup frame -->
+        <div class="reveal reveal-delay-2 flex justify-center">
+          <div class="relative w-full max-w-3xl">
+            <!-- Laptop lid -->
+            <div class="relative rounded-xl overflow-hidden border-2 border-[#2a2a2a] shadow-2xl" style={`box-shadow:0 40px 100px ${p.color}12`}>
+              <div style="height:28px;background:#1a1a1a;border-bottom:1px solid #222;display:flex;align-items:center;gap:6px;padding:0 12px">
+                <div style="width:9px;height:9px;border-radius:50%;background:#ef4444"></div>
+                <div style="width:9px;height:9px;border-radius:50%;background:#f59e0b"></div>
+                <div style="width:9px;height:9px;border-radius:50%;background:#22c55e"></div>
+                <div style="flex:1;text-align:center;font-size:9px;color:#333;font-family:monospace">SalesCRM — Stock Management</div>
+              </div>
+              <!-- Dashboard overview screen -->
+              <div style="height:320px;background:#0d0d0d;display:flex;overflow:hidden;font-family:-apple-system,sans-serif;color:#e0e0e0;padding:16px;gap:12px">
+                <div style="flex:1">
+                  <div style="font-size:14px;font-weight:700;margin-bottom:12px">Dashboard</div>
+                  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:12px">
+                    <div style="background:#161616;border:1px solid #222;border-radius:8px;padding:10px"><div style="color:#888;font-size:8px;margin-bottom:3px">Total Stock</div><div style="font-size:18px;font-weight:700;color:#f59e0b">247</div></div>
+                    <div style="background:#161616;border:1px solid #222;border-radius:8px;padding:10px"><div style="color:#888;font-size:8px;margin-bottom:3px">In Stock</div><div style="font-size:18px;font-weight:700;color:#14b866">142</div></div>
+                    <div style="background:#161616;border:1px solid #222;border-radius:8px;padding:10px"><div style="color:#888;font-size:8px;margin-bottom:3px">Sold</div><div style="font-size:18px;font-weight:700;color:#ef4444">105</div></div>
+                  </div>
+                  <div style="background:#161616;border:1px solid #222;border-radius:8px;padding:10px">
+                    <div style="font-size:10px;font-weight:600;margin-bottom:8px">Recent Activity</div>
+                    ${['Macbook Pro M1 → In Stock · ₹98,000','Dell OptiPlex 5060 → Sold · ₹32,000','Dell F425 (16GB) → In Stock · ₹91,000'].map(a=>`<div style="font-size:9px;color:#666;padding:4px 0;border-bottom:1px solid #1e1e1e">${a}</div>`).join('')}
+                  </div>
+                </div>
+                <div style="width:200px;flex-shrink:0">
+                  <div style="font-size:10px;font-weight:600;margin-bottom:8px;color:#888">Top Vendors</div>
+                  ${[{n:'Shima Kumar',c:84},{n:'Trafa Intl',c:71},{n:'Lekhup Intl',c:45},{n:'Bhima Techno',c:32}].map(v=>`
+                  <div style="margin-bottom:8px">
+                    <div style="display:flex;justify-content:space-between;font-size:9px;margin-bottom:3px"><span style="color:#aaa">${v.n}</span><span style="color:#f59e0b;font-weight:600">${v.c}</span></div>
+                    <div style="height:3px;background:#1e1e1e;border-radius:2px;overflow:hidden"><div style="height:100%;background:#f59e0b;border-radius:2px;width:${v.c}%"></div></div>
+                  </div>`).join('')}
+                </div>
+              </div>
+            </div>
+            <!-- Laptop base -->
+            <div class="h-3 bg-[#1a1a1a] rounded-b-xl border-x-2 border-b-2 border-[#2a2a2a] mx-2"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Content -->
+    <section class="py-20 bg-[#080808] border-t border-white/[0.04]">
+      <div class="max-w-7xl mx-auto px-5 lg:px-10">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <div class="reveal"><h2 class="font-display font-bold text-2xl text-white mb-4">Project Overview</h2><p class="text-white/50 text-[15px] leading-relaxed">{p.overview}</p></div>
+          <div class="reveal reveal-delay-2"><h2 class="font-display font-bold text-2xl text-white mb-4">The Challenge</h2><p class="text-white/50 text-[15px] leading-relaxed">{p.challenge}</p></div>
+        </div>
+        <div class="reveal reveal-delay-3 mt-12"><h2 class="font-display font-bold text-2xl text-white mb-4">Our Solution</h2><p class="text-white/50 text-[15px] leading-relaxed max-w-3xl">{p.solution}</p></div>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section class="py-20 bg-[#0a0a0a]">
+      <div class="max-w-7xl mx-auto px-5 lg:px-10">
+        <h2 class="reveal font-display font-bold text-3xl text-white mb-10">Key Features</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 stagger">
+          {p.features.map(f => (
+            <div class="reveal card-hover p-6 rounded-2xl border border-white/[0.06] bg-white/[0.02] group cursor-default">
+              <div class="w-10 h-10 rounded-xl mb-4 flex items-center justify-center" style={`background:${p.color}14;border:1px solid ${p.color}25`}>
+                <div class="w-2 h-2 rounded-full" style={`background:${p.color}`}></div>
+              </div>
+              <h3 class="font-display font-semibold text-white mb-2 group-hover:text-[#e5173f] transition-colors">{f.title}</h3>
+              <p class="text-white/45 text-sm leading-relaxed">{f.desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20 bg-[#080808] border-t border-white/[0.04]">
+      <div class="max-w-2xl mx-auto px-5 text-center reveal">
+        <h2 class="font-display font-extrabold text-3xl md:text-4xl text-white mb-4">Need something like this?</h2>
+        <p class="text-white/45 text-base mb-8 leading-relaxed">We build custom platforms tailored to your business. Let's talk about your project.</p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="/#contact" class="btn-primary px-7 py-3.5">Start a Project</a>
+          <a href="/#work" class="btn-outline px-7 py-3.5">View More Work</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>

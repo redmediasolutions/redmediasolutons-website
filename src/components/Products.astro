@@ -1,0 +1,144 @@
+---
+const products = [
+  {
+    slug:'carekapital',
+    name:'Carekapital',
+    tagline:'Bond Investment Management Platform',
+    desc:'Wealth management SaaS for fund managers — list bonds, onboard investors, track AUM and automate payouts with real-time dashboards and KYC.',
+    category:'FinTech · SaaS',
+    color:'#4f8ef7',
+    metrics:[{v:'₹43.3L',l:'AUM Managed'},{v:'99.8%',l:'Collection Rate'},{v:'3',l:'Live Investors'}],
+    icon:`<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>`,
+    size:'large',
+  },
+  {
+    slug:'hrcrm',
+    name:'HRCRM',
+    tagline:'HR & Payroll Management SaaS',
+    desc:'All-in-one HR platform covering employee directories, payroll, attendance, financial assistance loans and multi-department management.',
+    category:'HRTech · SaaS',
+    color:'#2dd4bf',
+    metrics:[{v:'5+',l:'Departments'},{v:'Real-time',l:'Attendance'}],
+    icon:`<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>`,
+    size:'small',
+  },
+  {
+    slug:'salescrm',
+    name:'SalesCRM',
+    tagline:'Inventory & Stock Management SaaS',
+    desc:'Dark-mode-first SaaS for tracking product inventory, vendors, serial numbers, stock conditions and purchase history with powerful search.',
+    category:'Inventory · SaaS',
+    color:'#f59e0b',
+    metrics:[{v:'1000+',l:'SKUs Tracked'},{v:'Multi-vendor',l:'Support'}],
+    icon:`<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>`,
+    size:'small',
+  },
+  {
+    slug:'konkani-music',
+    name:'Konkani Music',
+    tagline:'Cultural Music Streaming App',
+    desc:'Dedicated streaming platform for Konkani music — traditional hymns, modern tunes, curated playlists. Published on Android & iOS.',
+    category:'Music · Mobile App',
+    color:'#8b5cf6',
+    metrics:[{v:'5K+',l:'Downloads'},{v:'4.8★',l:'App Rating'}],
+    icon:`<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>`,
+    size:'small',
+  },
+  {
+    slug:'108medz',
+    name:'108 Medz',
+    tagline:'Affordable Medicine Delivery App',
+    desc:'Healthcare app for ordering quality medicines with up to 70% savings. Prescription upload via WhatsApp, order tracking, 2000+ products.',
+    category:'HealthTech · Mobile App',
+    color:'#14b866',
+    metrics:[{v:'70%',l:'Cost Savings'},{v:'2000+',l:'Products'}],
+    icon:`<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>`,
+    size:'small',
+  },
+  {
+    slug:'anwymed',
+    name:'AnwyMed',
+    tagline:'Doctor CRM & Clinic Management',
+    desc:'Mobile clinic management for doctors — patient appointments, invoice generation, inventory alerts, pending revenue tracking.',
+    category:'HealthTech · Mobile App',
+    color:'#3b82f6',
+    metrics:[{v:'12+',l:'Daily Appointments'},{v:'Smart',l:'Billing'}],
+    icon:`<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>`,
+    size:'small',
+  },
+];
+---
+
+<section id="products" class="relative py-28 overflow-hidden bg-[#080808]">
+  <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#e5173f]/20 to-transparent"></div>
+  <div class="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#e5173f]/10 to-transparent"></div>
+  <div class="absolute top-1/2 left-0 w-[500px] h-[500px] bg-[#e5173f] rounded-full blur-[220px] opacity-[0.04]"></div>
+
+  <div class="max-w-7xl mx-auto px-5 lg:px-10">
+
+    <!-- Header -->
+    <div class="mb-16">
+      <div class="reveal inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[#e5173f]/20 bg-[#e5173f]/[0.06] mb-5">
+        <span class="w-1.5 h-1.5 rounded-full bg-[#e5173f]"></span>
+        <span class="text-[#e5173f] text-[11px] uppercase tracking-widest">Our Products</span>
+      </div>
+      <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-5">
+        <h2 class="reveal reveal-delay-1 font-display font-extrabold text-[clamp(2.2rem,5vw,3.8rem)] text-white leading-tight">
+          Products We've <span class="text-gradient">Built</span>
+        </h2>
+        <p class="reveal reveal-delay-2 text-white/45 text-base max-w-sm leading-relaxed">
+          Real software solving real problems — each product shaped from months of collaboration with clients.
+        </p>
+      </div>
+    </div>
+
+    <!-- Bento grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      {products.map((p,i)=>(
+        <a
+          href={`/projects/${p.slug}`}
+          class={`reveal reveal-delay-${(i%3)+1} card-hover group relative flex flex-col p-7 rounded-2xl border border-white/[0.06] bg-white/[0.02] hover:border-[#e5173f]/20 transition-all duration-400 overflow-hidden ${p.size==='large'?'lg:col-span-2':''}`}
+        >
+          <!-- Hover glow -->
+          <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
+               style={`background:radial-gradient(ellipse at 20% 20%, ${p.color}08 0%, transparent 65%)`}></div>
+
+          <!-- Top row -->
+          <div class="relative z-10 flex items-start justify-between mb-5">
+            <div class="w-11 h-11 rounded-xl flex items-center justify-center"
+                 style={`background:${p.color}15;border:1px solid ${p.color}25;color:${p.color}`}>
+              <Fragment set:html={p.icon}/>
+            </div>
+            <span class="text-[11px] px-2.5 py-1 rounded-full font-medium"
+                  style={`background:${p.color}12;color:${p.color};border:1px solid ${p.color}22`}>{p.category}</span>
+          </div>
+
+          <!-- Content -->
+          <div class="relative z-10 flex-1">
+            <h3 class={`font-display font-bold text-white mb-1.5 group-hover:text-[#e5173f] transition-colors ${p.size==='large'?'text-2xl':'text-xl'}`}>
+              {p.name}
+            </h3>
+            <p class="text-[13px] mb-3 font-medium" style={`color:${p.color};opacity:.85`}>{p.tagline}</p>
+            <p class="text-white/45 text-[13px] leading-relaxed mb-5">{p.desc}</p>
+
+            <!-- Metrics -->
+            <div class="flex gap-5 mb-5">
+              {p.metrics.map(m=>(
+                <div>
+                  <div class="font-display font-bold text-white text-lg leading-none">{m.v}</div>
+                  <div class="text-[11px] text-white/35 mt-0.5">{m.l}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <!-- View link -->
+          <div class="relative z-10 flex items-center gap-2 text-[12px] text-white/30 group-hover:text-[#e5173f] transition-colors mt-auto pt-4 border-t border-white/[0.05]">
+            <span>View Project</span>
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M1 6h10M7 2l4 4-4 4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+        </a>
+      ))}
+    </div>
+  </div>
+</section>

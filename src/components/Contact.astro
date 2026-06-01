@@ -1,0 +1,142 @@
+---
+---
+<section id="contact" class="relative py-28 overflow-hidden">
+  <div class="absolute inset-0 bg-[#0a0a0a]">
+    <div class="absolute top-1/4 right-1/3 w-[500px] h-[500px] bg-[#e5173f] rounded-full blur-[200px] opacity-[0.06]"></div>
+    <div class="absolute bottom-1/3 left-1/4 w-[400px] h-[400px] bg-[#e5173f] rounded-full blur-[180px] opacity-[0.04]"></div>
+  </div>
+
+  <div class="relative z-10 max-w-7xl mx-auto px-5 lg:px-10">
+
+    <div class="text-center mb-14">
+      <div class="reveal inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[#e5173f]/20 bg-[#e5173f]/[0.06] mb-5">
+        <span class="w-1.5 h-1.5 rounded-full bg-[#e5173f]"></span>
+        <span class="text-[#e5173f] text-[11px] uppercase tracking-widest">Get In Touch</span>
+      </div>
+      <h2 class="reveal reveal-delay-1 font-display font-extrabold text-[clamp(2.2rem,5vw,3.8rem)] text-white leading-tight">
+        Let's Build Something<br/><span class="text-gradient">Great Together</span>
+      </h2>
+      <p class="reveal reveal-delay-2 text-white/45 text-base mt-3 max-w-lg mx-auto leading-relaxed">
+        Have a project in mind? Tell us about it — we'll get back to you within a few hours.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-5 gap-10">
+
+      <!-- Form -->
+      <div class="lg:col-span-3 reveal">
+        <form id="contactForm" class="space-y-4">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-[11px] text-white/35 mb-2 uppercase tracking-widest">Your Name *</label>
+              <input type="text" name="name" required placeholder="John Doe"
+                class="w-full px-4 py-3.5 bg-white/[0.03] border border-white/[0.08] rounded-xl text-white text-sm placeholder:text-white/20 focus:outline-none focus:border-[#e5173f]/35 focus:bg-[#e5173f]/[0.03] transition-all"/>
+            </div>
+            <div>
+              <label class="block text-[11px] text-white/35 mb-2 uppercase tracking-widest">Email *</label>
+              <input type="email" name="email" required placeholder="you@company.com"
+                class="w-full px-4 py-3.5 bg-white/[0.03] border border-white/[0.08] rounded-xl text-white text-sm placeholder:text-white/20 focus:outline-none focus:border-[#e5173f]/35 focus:bg-[#e5173f]/[0.03] transition-all"/>
+            </div>
+          </div>
+          <div>
+            <label class="block text-[11px] text-white/35 mb-2 uppercase tracking-widest">Company / Project</label>
+            <input type="text" name="company" placeholder="Optional"
+              class="w-full px-4 py-3.5 bg-white/[0.03] border border-white/[0.08] rounded-xl text-white text-sm placeholder:text-white/20 focus:outline-none focus:border-[#e5173f]/35 focus:bg-[#e5173f]/[0.03] transition-all"/>
+          </div>
+          <div>
+            <label class="block text-[11px] text-white/35 mb-2 uppercase tracking-widest">Service</label>
+            <select name="service"
+              class="w-full px-4 py-3.5 bg-white/[0.03] border border-white/[0.08] rounded-xl text-white/60 text-sm focus:outline-none focus:border-[#e5173f]/35 transition-all appearance-none">
+              <option value="" class="bg-[#1a1a1a]">Select a service…</option>
+              <option value="website" class="bg-[#1a1a1a]">Website Development</option>
+              <option value="mobile" class="bg-[#1a1a1a]">Mobile App Development</option>
+              <option value="saas" class="bg-[#1a1a1a]">SaaS Product</option>
+              <option value="design" class="bg-[#1a1a1a]">UI / UX Design</option>
+              <option value="other" class="bg-[#1a1a1a]">Other</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-[11px] text-white/35 mb-2 uppercase tracking-widest">Tell us about your project *</label>
+            <textarea name="message" required rows="5" placeholder="What are you building? Timeline, budget, goals..."
+              class="w-full px-4 py-3.5 bg-white/[0.03] border border-white/[0.08] rounded-xl text-white text-sm placeholder:text-white/20 focus:outline-none focus:border-[#e5173f]/35 focus:bg-[#e5173f]/[0.03] transition-all resize-none"></textarea>
+          </div>
+          <button type="submit" id="submitBtn" class="btn-primary w-full justify-center py-4 text-[15px]">
+            <span>Send Message</span>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13"/><path d="M22 2L15 22 11 13 2 9l20-7z"/></svg>
+          </button>
+          <p id="successMsg" class="hidden text-center text-[#4ade80] text-sm py-2">
+            ✓ Message sent! We'll reply within a few hours.
+          </p>
+        </form>
+      </div>
+
+      <!-- Info panel -->
+      <div class="lg:col-span-2 space-y-4 reveal reveal-delay-2">
+
+        <a href="tel:+919591591783"
+          class="flex items-center gap-4 p-5 rounded-2xl border border-white/[0.06] bg-white/[0.02] hover:border-[#e5173f]/20 hover:bg-[#e5173f]/[0.03] transition-all group">
+          <div class="w-11 h-11 rounded-xl bg-[#e5173f]/10 border border-[#e5173f]/18 flex items-center justify-center text-[#e5173f] flex-shrink-0 group-hover:bg-[#e5173f]/20 transition-colors">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8 19.79 19.79 0 01.22 1.18a2 2 0 012-1.98h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.2 6.2l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          </div>
+          <div>
+            <div class="text-[10px] text-white/35 uppercase tracking-widest mb-0.5">Phone / WhatsApp</div>
+            <div class="text-white font-display font-semibold text-[15px] group-hover:text-[#e5173f] transition-colors">+91 95915 91783</div>
+          </div>
+        </a>
+
+        <a href="mailto:redmediasolutins8@gmail.com"
+          class="flex items-center gap-4 p-5 rounded-2xl border border-white/[0.06] bg-white/[0.02] hover:border-[#e5173f]/20 hover:bg-[#e5173f]/[0.03] transition-all group">
+          <div class="w-11 h-11 rounded-xl bg-[#e5173f]/10 border border-[#e5173f]/18 flex items-center justify-center text-[#e5173f] flex-shrink-0 group-hover:bg-[#e5173f]/20 transition-colors">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </div>
+          <div>
+            <div class="text-[10px] text-white/35 uppercase tracking-widest mb-0.5">Email</div>
+            <div class="text-white font-display font-semibold text-[14px] group-hover:text-[#e5173f] transition-colors break-all">redmediasolutins8@gmail.com</div>
+          </div>
+        </a>
+
+        <div class="flex items-center gap-4 p-5 rounded-2xl border border-white/[0.06] bg-white/[0.02]">
+          <div class="w-11 h-11 rounded-xl bg-[#e5173f]/10 border border-[#e5173f]/18 flex items-center justify-center text-[#e5173f] flex-shrink-0">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <div>
+            <div class="text-[10px] text-white/35 uppercase tracking-widest mb-0.5">Location</div>
+            <div class="text-white font-display font-semibold text-[15px]">Mangaluru, India</div>
+          </div>
+        </div>
+
+        <div class="p-5 rounded-2xl border border-[#4ade80]/18 bg-[#4ade80]/[0.04]">
+          <div class="flex items-center gap-2.5 mb-2">
+            <div class="w-2 h-2 rounded-full bg-[#4ade80] glow-dot"></div>
+            <span class="text-[#4ade80] text-sm font-medium">Currently Accepting Projects</span>
+          </div>
+          <p class="text-white/40 text-[13px] leading-relaxed">We typically respond within a few hours on business days (Mon–Sat).</p>
+        </div>
+
+        <div class="p-5 rounded-2xl border border-white/[0.06] bg-white/[0.02]">
+          <h4 class="font-display font-semibold text-white text-sm mb-3">Business Hours</h4>
+          <div class="space-y-2 text-[13px]">
+            <div class="flex justify-between"><span class="text-white/40">Mon – Sat</span><span class="text-white">9 AM – 7 PM IST</span></div>
+            <div class="flex justify-between"><span class="text-white/40">Sunday</span><span class="text-white/60">By Appointment</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  const form = document.getElementById('contactForm') as HTMLFormElement;
+  const btn  = document.getElementById('submitBtn') as HTMLButtonElement;
+  const msg  = document.getElementById('successMsg') as HTMLElement;
+
+  form?.addEventListener('submit', async e => {
+    e.preventDefault();
+    btn.disabled = true;
+    btn.innerHTML = '<span>Sending…</span>';
+    await new Promise(r => setTimeout(r, 900));
+    btn.style.display = 'none';
+    msg.classList.remove('hidden');
+    form.reset();
+  });
+</script>

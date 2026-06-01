@@ -1,0 +1,68 @@
+---
+import '../styles/global.css';
+const { title = 'Red Media Solutions — Premium IT Agency, Mangaluru' } = Astro.props;
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Red Media Solutions — Premium IT agency building custom websites, mobile apps and SaaS platforms. Based in Mangaluru." />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <title>{title}</title>
+  <meta name="theme-color" content="#0a0a0a" />
+</head>
+<body class="grain">
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-trail" id="cursorTrail"></div>
+
+  <slot />
+
+  <script>
+    // ── Custom cursor ──
+    const cursor   = document.getElementById('cursor')!;
+    const trail    = document.getElementById('cursorTrail')!;
+    let cx=0,cy=0,tx=0,ty=0;
+
+    document.addEventListener('mousemove', e => {
+      cx = e.clientX; cy = e.clientY;
+      cursor.style.left = cx+'px'; cursor.style.top = cy+'px';
+    });
+    (function loop(){
+      tx += (cx-tx)*.12; ty += (cy-ty)*.12;
+      trail.style.left = tx+'px'; trail.style.top = ty+'px';
+      requestAnimationFrame(loop);
+    })();
+    document.querySelectorAll('a,button,[data-hover]').forEach(el=>{
+      el.addEventListener('mouseenter',()=>{
+        cursor.style.width='16px'; cursor.style.height='16px';
+        trail.style.width='58px'; trail.style.height='58px';
+      });
+      el.addEventListener('mouseleave',()=>{
+        cursor.style.width='10px'; cursor.style.height='10px';
+        trail.style.width='38px'; trail.style.height='38px';
+      });
+    });
+
+    // ── Scroll reveal ──
+    const obs = new IntersectionObserver(entries=>{
+      entries.forEach(e=>{ if(e.isIntersecting) e.target.classList.add('visible'); });
+    },{threshold:0.08});
+    document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+
+    // ── Nav scroll glass ──
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll',()=>{
+      nav?.classList.toggle('nav-scrolled', window.scrollY>60);
+    },{passive:true});
+  </script>
+
+  <style>
+    #nav.nav-scrolled {
+      background: rgba(10,10,10,.94) !important;
+      backdrop-filter: blur(24px) saturate(1.5);
+      border-bottom: 1px solid rgba(255,255,255,.05);
+    }
+  </style>
+</body>
+</html>

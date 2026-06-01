@@ -1,0 +1,83 @@
+---
+---
+<header id="nav" class="fixed top-0 left-0 right-0 z-50 transition-all duration-500">
+  <div class="max-w-7xl mx-auto px-5 lg:px-10">
+    <div class="flex items-center justify-between h-[72px]">
+
+      <!-- Logo -->
+      <a href="/" class="flex items-center gap-2.5 group" aria-label="Red Media Solutions">
+        <div class="relative w-9 h-9 flex-shrink-0">
+          <div class="absolute inset-0 bg-[#e5173f] rounded-lg rotate-6 group-hover:rotate-12 transition-transform duration-300"></div>
+          <div class="absolute inset-0 bg-[#0a0a0a] border border-[#e5173f]/40 rounded-lg flex items-center justify-center">
+            <span class="text-[#e5173f] font-display font-bold text-sm leading-none">R</span>
+          </div>
+        </div>
+        <span class="font-display font-bold text-white text-lg tracking-tight leading-none">
+          Red Media<span class="text-[#e5173f]">.</span>
+        </span>
+      </a>
+
+      <!-- Desktop nav -->
+      <nav class="hidden md:flex items-center gap-7">
+        <a href="/#services"  class="nav-link text-[13px] text-white/55 hover:text-white transition-colors">Services</a>
+        <a href="/#products"  class="nav-link text-[13px] text-white/55 hover:text-white transition-colors">Products</a>
+        <a href="/#work"      class="nav-link text-[13px] text-white/55 hover:text-white transition-colors">Work</a>
+        <a href="/#process"   class="nav-link text-[13px] text-white/55 hover:text-white transition-colors">Process</a>
+        <a href="/#tech"      class="nav-link text-[13px] text-white/55 hover:text-white transition-colors">Tech</a>
+      </nav>
+
+      <!-- CTA -->
+      <div class="hidden md:flex items-center gap-4">
+        <a href="tel:+919591591783" class="text-[13px] text-white/40 hover:text-white transition-colors">+91 95915 91783</a>
+        <a href="/#contact" class="btn-primary text-[13px] py-2.5 px-5">
+          <span>Let's Talk</span>
+          <svg width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M1 7h12M8 2l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+
+      <!-- Hamburger -->
+      <button id="burger" aria-label="Menu" class="md:hidden flex flex-col gap-[5px] w-9 h-9 items-center justify-center">
+        <span class="burger-line block w-5 h-[1.5px] bg-white transition-all origin-center"></span>
+        <span class="burger-line block w-5 h-[1.5px] bg-white transition-all"></span>
+        <span class="burger-line block w-5 h-[1.5px] bg-white transition-all origin-center"></span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile drawer -->
+  <div id="mobileMenu" class="md:hidden hidden bg-[#0d0d0d]/98 backdrop-blur-2xl border-t border-white/[0.06]">
+    <div class="px-6 py-8 space-y-5">
+      <a href="/#services" onclick="closeMenu()" class="block text-lg font-display text-white/70 hover:text-white transition-colors">Services</a>
+      <a href="/#products" onclick="closeMenu()" class="block text-lg font-display text-white/70 hover:text-white transition-colors">Products</a>
+      <a href="/#work"     onclick="closeMenu()" class="block text-lg font-display text-white/70 hover:text-white transition-colors">Work</a>
+      <a href="/#process"  onclick="closeMenu()" class="block text-lg font-display text-white/70 hover:text-white transition-colors">Process</a>
+      <a href="/#tech"     onclick="closeMenu()" class="block text-lg font-display text-white/70 hover:text-white transition-colors">Tech</a>
+      <div class="pt-5 border-t border-white/[0.08]">
+        <a href="/#contact" onclick="closeMenu()" class="btn-primary w-full justify-center">Let's Talk</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<script>
+  const burger = document.getElementById('burger')!;
+  const menu   = document.getElementById('mobileMenu')!;
+  const lines  = burger.querySelectorAll('.burger-line');
+  let open = false;
+
+  burger.addEventListener('click',()=>{
+    open = !open;
+    menu.classList.toggle('hidden',!open);
+    if(open){
+      (lines[0] as HTMLElement).style.transform = 'rotate(45deg) translate(3px,3px)';
+      (lines[1] as HTMLElement).style.opacity   = '0';
+      (lines[2] as HTMLElement).style.transform = 'rotate(-45deg) translate(3px,-3px)';
+    } else {
+      lines.forEach(l=>{ (l as HTMLElement).style.transform=''; (l as HTMLElement).style.opacity='1'; });
+    }
+  });
+  (window as any).closeMenu = ()=>{
+    open=false; menu.classList.add('hidden');
+    lines.forEach(l=>{ (l as HTMLElement).style.transform=''; (l as HTMLElement).style.opacity='1'; });
+  };
+</script>

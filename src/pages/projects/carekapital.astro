@@ -1,0 +1,243 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navigation from '../../components/Navigation.astro';
+import Footer from '../../components/Footer.astro';
+
+const project = {
+  name: 'Carekapital',
+  tagline: 'Bond Investment Management Platform',
+  category: 'FinTech · SaaS',
+  year: '2025',
+  color: '#4f8ef7',
+  colorDark: '#1a3a7a',
+  type: 'Web Platform',
+  tech: ['Next.js', 'Node.js', 'MariaDB', 'AWS', 'REST API'],
+  overview: `Carekapital is a full-stack wealth management SaaS built for boutique fund managers and bond issuers. The platform lets admins list and manage bond products, onboard verified investors, track AUM in real time, and automate payout schedules — all within a clean, data-dense dashboard built for finance professionals.`,
+  challenge: `The client needed a single platform to replace a patchwork of spreadsheets and WhatsApp threads used to manage investor relations. The core challenge was designing data flows that were simultaneously intuitive for non-technical fund managers and robust enough to handle complex financial calculations and compliance requirements.`,
+  solution: `We built a role-based SaaS with two primary interfaces: an admin panel for fund managers to control bond listings, investor KYC, and payout processing; and a read-only investor view. Data integrity was enforced through server-side validation on every financial operation. The dashboard surfaces AUM, collection rates and payout statuses at a glance.`,
+  results: [
+    { v: '₹43.3L', l: 'Total AUM Managed' },
+    { v: '99.8%', l: 'Collection Rate' },
+    { v: '3', l: 'Active Investors' },
+    { v: '49', l: 'Payouts Processed' },
+  ],
+  features: [
+    { title: 'Bond Listings', desc: 'Create and manage multiple bond products with return rates, minimum investment, duration and risk profile.' },
+    { title: 'Investor Directory', desc: 'Full KYC-verified investor registry with portfolio tracking, active holdings and contact management.' },
+    { title: 'AUM Dashboard', desc: 'Real-time assets under management overview with month-on-month growth indicators.' },
+    { title: 'Payout Management', desc: 'Schedule, track and reconcile payouts with full audit trail and pending/completed status.' },
+    { title: 'Dashboard Overview', desc: 'Birds-eye view of all platform activity — new investors, bond distribution charts and top investors by portfolio value.' },
+    { title: 'Role-Based Access', desc: 'Admin and investor roles with distinct permission sets and isolated data views.' },
+  ],
+};
+---
+
+<Layout title={`${project.name} — Red Media Solutions`}>
+  <Navigation />
+
+  <main class="pt-[72px]">
+
+    <!-- Hero -->
+    <section class="relative min-h-[60vh] flex items-end overflow-hidden pb-16">
+      <div class="absolute inset-0" style={`background: linear-gradient(160deg, #0a0a0a 0%, ${project.colorDark}40 50%, #0a0a0a 100%)`}></div>
+      <div class="absolute top-1/3 right-1/4 w-[500px] h-[500px] rounded-full blur-[180px] opacity-[0.15]" style={`background:${project.color}`}></div>
+
+      <div class="relative z-10 max-w-7xl mx-auto px-5 lg:px-10 w-full">
+        <a href="/#work" class="inline-flex items-center gap-2 text-white/40 hover:text-white transition-colors text-sm mb-8 group">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M13 7H1M6 2L1 7l5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span>Back to Work</span>
+        </a>
+        <div class="reveal inline-flex items-center gap-2 px-3 py-1.5 rounded-full border mb-5" style={`border-color:${project.color}30;background:${project.color}12`}>
+          <span class="w-1.5 h-1.5 rounded-full" style={`background:${project.color}`}></span>
+          <span class="text-[11px] font-medium" style={`color:${project.color}`}>{project.category} · {project.year}</span>
+        </div>
+        <h1 class="reveal reveal-delay-1 font-display font-extrabold text-[clamp(3rem,8vw,6.5rem)] text-white leading-[.9] tracking-tight mb-4">
+          {project.name}
+        </h1>
+        <p class="reveal reveal-delay-2 text-white/50 text-lg md:text-xl max-w-xl leading-relaxed">{project.tagline}</p>
+
+        <!-- Tech pills -->
+        <div class="reveal reveal-delay-3 flex flex-wrap gap-2 mt-8">
+          {project.tech.map(t => (
+            <span class="px-3 py-1.5 text-[11.5px] text-white/40 bg-white/[0.05] border border-white/[0.08] rounded-full">{t}</span>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Results strip -->
+    <section class="border-y border-white/[0.06] bg-[#0d0d0d]">
+      <div class="max-w-7xl mx-auto px-5 lg:px-10">
+        <div class="grid grid-cols-2 md:grid-cols-4 divide-x divide-white/[0.06]">
+          {project.results.map((r, i) => (
+            <div class={`reveal reveal-delay-${i+1} p-8 text-center`}>
+              <div class="font-display font-extrabold text-3xl md:text-4xl text-white mb-1" style={`color:${project.color}`}>{r.v}</div>
+              <div class="text-[11px] text-white/35 uppercase tracking-widest">{r.l}</div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Desktop mockup showcase -->
+    <section class="py-20 bg-[#0a0a0a]">
+      <div class="max-w-7xl mx-auto px-5 lg:px-10">
+        <div class="reveal">
+          <div class="desktop-mockup max-w-5xl mx-auto shadow-2xl" style={`box-shadow: 0 40px 120px ${project.color}18`}>
+            <div class="desktop-mockup-bar">
+              <div class="desktop-mockup-dot" style="background:#ef4444"></div>
+              <div class="desktop-mockup-dot" style="background:#f59e0b"></div>
+              <div class="desktop-mockup-dot" style="background:#22c55e"></div>
+              <div class="flex-1 mx-4">
+                <div class="bg-[#111] rounded px-3 py-1 text-[10px] text-white/20 w-48">carekapital.app/dashboard</div>
+              </div>
+            </div>
+            <!-- Main dashboard mockup -->
+            <div style="height:440px;background:#f8f9fc;overflow:hidden;display:flex">
+              <!-- Sidebar -->
+              <div style="width:200px;background:#fff;border-right:1px solid #eee;padding:16px 0;flex-shrink:0;display:flex;flex-direction:column">
+                <div style="padding:0 16px 14px;border-bottom:1px solid #eee;margin-bottom:10px;display:flex;align-items:center;gap:10px">
+                  <div style="background:#4f8ef7;color:#fff;width:30px;height:30px;border-radius:7px;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:13px;font-family:-apple-system,sans-serif">C</div>
+                  <div><div style="font-weight:700;font-size:12px;color:#1a1a1a;font-family:-apple-system,sans-serif">Carekapital</div><div style="font-size:9px;color:#999;font-family:-apple-system,sans-serif">Admin</div></div>
+                </div>
+                <div style="padding:0 12px;flex:1;font-family:-apple-system,sans-serif">
+                  <div style="padding:7px 10px;border-radius:7px;background:#eff4ff;color:#4f8ef7;font-weight:600;margin-bottom:3px;font-size:11px">Bond Listings</div>
+                  <div style="padding:7px 10px;color:#777;font-size:11px;margin-bottom:3px">Investors</div>
+                  <div style="padding:7px 10px;color:#777;font-size:11px;margin-bottom:3px">Payouts</div>
+                  <div style="padding:7px 10px;color:#777;font-size:11px">Payout Requests</div>
+                </div>
+              </div>
+              <!-- Content area -->
+              <div style="flex:1;padding:20px;overflow:hidden;font-family:-apple-system,sans-serif">
+                <div style="font-size:18px;font-weight:700;color:#1a1a1a;margin-bottom:3px">Bond Listings</div>
+                <div style="color:#aaa;font-size:10px;margin-bottom:16px">Manage and monitor your investment inventory</div>
+                <!-- Bond cards -->
+                {['ALPHA 1 · ACTIVE · ₹17.8L · 15.09% · LOW','ALPHA 0.5 · ACTIVE · ₹7.8L · 15.09% · LOW','ALPHA 0.25 · INACTIVE · ₹4.0L · 15.09% · LOW'].map((bond, bi) => `
+                  <div style="background:#fff;border:1px solid #eee;border-radius:10px;padding:13px 15px;margin-bottom:10px;box-shadow:0 1px 3px rgba(0,0,0,.04)">
+                    <div style="display:flex;align-items:center;gap:9px;margin-bottom:9px">
+                      <div style="background:#4f8ef7;color:#fff;width:24px;height:24px;border-radius:5px;display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:700">C</div>
+                      <span style="font-weight:700;font-size:12px">${bond.split('·')[0].trim()}</span>
+                      <span style="background:${bi===2?'#fff3f3':'#e6f9f0'};color:${bi===2?'#ef4444':'#14b866'};padding:1px 7px;border-radius:10px;font-size:9px;font-weight:600">${bond.split('·')[1].trim()}</span>
+                    </div>
+                    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:10px">
+                      <div><div style="color:#aaa;font-size:9px">Return</div><div style="color:#14b866;font-weight:700;font-size:11px">${bond.split('·')[3].trim()}</div></div>
+                      <div><div style="color:#aaa;font-size:9px">Min Investment</div><div style="font-weight:600;font-size:11px">${bond.split('·')[2].trim()}</div></div>
+                      <div><div style="color:#aaa;font-size:9px">Duration</div><div style="font-weight:600;font-size:11px">60m</div></div>
+                      <div><div style="color:#aaa;font-size:9px">Risk Profile</div><div style="color:#4f8ef7;font-weight:600;font-size:11px">${bond.split('·')[4].trim()}</div></div>
+                    </div>
+                  </div>`).join('')}
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Second mockup: Dashboard Overview -->
+        <div class="reveal mt-8">
+          <div class="desktop-mockup max-w-5xl mx-auto" style={`box-shadow: 0 40px 120px ${project.color}10`}>
+            <div class="desktop-mockup-bar">
+              <div class="desktop-mockup-dot" style="background:#ef4444"></div>
+              <div class="desktop-mockup-dot" style="background:#f59e0b"></div>
+              <div class="desktop-mockup-dot" style="background:#22c55e"></div>
+              <div class="flex-1 mx-4">
+                <div class="bg-[#111] rounded px-3 py-1 text-[10px] text-white/20 w-48">carekapital.app/overview</div>
+              </div>
+            </div>
+            <div style="height:380px;background:#f8f9fc;overflow:hidden;display:flex;font-family:-apple-system,sans-serif">
+              <div style="width:200px;background:#fff;border-right:1px solid #eee;padding:16px 0;flex-shrink:0">
+                <div style="padding:0 16px 14px;border-bottom:1px solid #eee;margin-bottom:10px;display:flex;align-items:center;gap:10px">
+                  <div style="background:#4f8ef7;color:#fff;width:30px;height:30px;border-radius:7px;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:13px">C</div>
+                  <div><div style="font-weight:700;font-size:12px;color:#1a1a1a">Carekapital</div></div>
+                </div>
+                <div style="padding:0 12px">
+                  <div style="padding:7px 10px;color:#777;font-size:11px;margin-bottom:3px">Bond Listings</div>
+                  <div style="padding:7px 10px;color:#777;font-size:11px;margin-bottom:3px">Investors</div>
+                  <div style="padding:7px 10px;color:#777;font-size:11px;margin-bottom:3px">Payouts</div>
+                  <div style="padding:7px 10px;color:#777;font-size:11px">Payout Requests</div>
+                </div>
+              </div>
+              <div style="flex:1;padding:18px;overflow:hidden">
+                <div style="font-size:16px;font-weight:700;color:#1a1a1a;margin-bottom:2px">Dashboard Overview</div>
+                <div style="color:#aaa;font-size:10px;margin-bottom:14px">Welcome back! Here's what's happening today.</div>
+                <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:14px">
+                  <div style="background:#fff;border:1px solid #eee;border-radius:8px;padding:12px"><div style="color:#aaa;font-size:9px;margin-bottom:3px">Total Investors</div><div style="font-size:20px;font-weight:700;color:#1a1a1a">3</div><div style="color:#14b866;font-size:9px;margin-top:2px">▲ 12.5% from last month</div></div>
+                  <div style="background:#fff;border:1px solid #eee;border-radius:8px;padding:12px"><div style="color:#aaa;font-size:9px;margin-bottom:3px">Assets Under Mgmt</div><div style="font-size:20px;font-weight:700;color:#1a1a1a">₹43.3L</div><div style="color:#14b866;font-size:9px;margin-top:2px">▲ 48.3% from last month</div></div>
+                  <div style="background:#fff;border:1px solid #eee;border-radius:8px;padding:12px"><div style="color:#aaa;font-size:9px;margin-bottom:3px">Payouts This Month</div><div style="font-size:20px;font-weight:700;color:#1a1a1a">₹7.5L</div><div style="color:#f59e0b;font-size:9px;margin-top:2px">49 pending</div></div>
+                </div>
+                <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
+                  <div style="background:#fff;border:1px solid #eee;border-radius:8px;padding:12px">
+                    <div style="font-size:11px;font-weight:600;color:#1a1a1a;margin-bottom:8px">Top Investors</div>
+                    ${[{n:'Sujay',v:'₹17.8L'},{n:'Joshua',v:'₹7.8L'},{n:'Gagan',v:'₹0'}].map(inv=>`<div style="display:flex;justify-content:space-between;align-items:center;padding:4px 0;border-bottom:1px solid #f5f5f5"><span style="font-size:10px;color:#555">${inv.n}</span><span style="font-size:10px;font-weight:600;color:#1a1a1a">${inv.v}</span></div>`).join('')}
+                  </div>
+                  <div style="background:#fff;border:1px solid #eee;border-radius:8px;padding:12px">
+                    <div style="font-size:11px;font-weight:600;color:#1a1a1a;margin-bottom:8px">Bond Distribution</div>
+                    <div style="font-size:9px;color:#aaa;margin-bottom:6px">By category</div>
+                    <div style="height:8px;background:#eee;border-radius:4px;overflow:hidden"><div style="height:100%;width:85%;background:#4f8ef7;border-radius:4px"></div></div>
+                    <div style="font-size:9px;color:#4f8ef7;margin-top:4px">● CORPORATE 85%</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Overview + Challenge -->
+    <section class="py-20 bg-[#080808] border-t border-white/[0.04]">
+      <div class="max-w-7xl mx-auto px-5 lg:px-10">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <div class="reveal">
+            <h2 class="font-display font-bold text-2xl text-white mb-4">Project Overview</h2>
+            <p class="text-white/50 text-[15px] leading-relaxed">{project.overview}</p>
+          </div>
+          <div class="reveal reveal-delay-2">
+            <h2 class="font-display font-bold text-2xl text-white mb-4">The Challenge</h2>
+            <p class="text-white/50 text-[15px] leading-relaxed">{project.challenge}</p>
+          </div>
+        </div>
+        <div class="reveal reveal-delay-3 mt-12">
+          <h2 class="font-display font-bold text-2xl text-white mb-4">Our Solution</h2>
+          <p class="text-white/50 text-[15px] leading-relaxed max-w-3xl">{project.solution}</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features grid -->
+    <section class="py-20 bg-[#0a0a0a]">
+      <div class="max-w-7xl mx-auto px-5 lg:px-10">
+        <h2 class="reveal font-display font-bold text-3xl text-white mb-10">Key Features</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 stagger">
+          {project.features.map((f, i) => (
+            <div class="reveal card-hover p-6 rounded-2xl border border-white/[0.06] bg-white/[0.02] group cursor-default">
+              <div class="w-10 h-10 rounded-xl mb-4 flex items-center justify-center" style={`background:${project.color}14;border:1px solid ${project.color}25`}>
+                <div class="w-2 h-2 rounded-full" style={`background:${project.color}`}></div>
+              </div>
+              <h3 class="font-display font-semibold text-white mb-2 group-hover:text-[#e5173f] transition-colors">{f.title}</h3>
+              <p class="text-white/45 text-sm leading-relaxed">{f.desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-20 bg-[#080808] border-t border-white/[0.04]">
+      <div class="max-w-2xl mx-auto px-5 text-center">
+        <div class="reveal">
+          <h2 class="font-display font-extrabold text-3xl md:text-4xl text-white mb-4">
+            Need something like this?
+          </h2>
+          <p class="text-white/45 text-base mb-8 leading-relaxed">
+            We build custom platforms tailored to your business. Let's talk about your project.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="/#contact" class="btn-primary px-7 py-3.5">Start a Project</a>
+            <a href="/#work" class="btn-outline px-7 py-3.5">View More Work</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <Footer />
+</Layout>

@@ -1,0 +1,101 @@
+---
+---
+<footer class="relative bg-[#080808] border-t border-white/[0.06] pt-16 pb-8 overflow-hidden">
+  <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-[600px] h-[200px] bg-[#e5173f] rounded-full blur-[160px] opacity-[0.04] pointer-events-none"></div>
+
+  <div class="relative max-w-7xl mx-auto px-5 lg:px-10">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-14">
+
+      <!-- Brand -->
+      <div class="lg:col-span-2">
+        <a href="/" class="flex items-center gap-2.5 mb-5 group w-fit">
+          <div class="relative w-9 h-9">
+            <div class="absolute inset-0 bg-[#e5173f] rounded-lg rotate-6 group-hover:rotate-12 transition-transform duration-300"></div>
+            <div class="absolute inset-0 bg-[#0a0a0a] border border-[#e5173f]/40 rounded-lg flex items-center justify-center">
+              <span class="text-[#e5173f] font-display font-bold text-sm">R</span>
+            </div>
+          </div>
+          <span class="font-display font-bold text-white text-xl tracking-tight">
+            Red Media<span class="text-[#e5173f]">.</span>
+          </span>
+        </a>
+        <p class="text-white/35 text-[13.5px] leading-relaxed max-w-xs mb-6">
+          A focused IT agency from Mangaluru — building custom websites, mobile apps and SaaS platforms that drive real results.
+        </p>
+        <div class="flex gap-2.5">
+          {[
+            {label:'Instagram',href:'#',icon:`<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>`},
+            {label:'LinkedIn', href:'#',icon:`<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>`},
+          ].map(s=>(
+            <a href={s.href} aria-label={s.label}
+               class="w-9 h-9 border border-white/[0.08] rounded-full flex items-center justify-center text-white/35 hover:text-white hover:border-[#e5173f]/35 hover:bg-[#e5173f]/10 transition-all">
+              <Fragment set:html={s.icon}/>
+            </a>
+          ))}
+        </div>
+      </div>
+
+      <!-- Services -->
+      <div>
+        <h4 class="font-display font-semibold text-white text-[13px] mb-5 uppercase tracking-wider">Services</h4>
+        <ul class="space-y-3">
+          {['Website Development','Mobile App Development','SaaS Products','UI / UX Design'].map(item=>(
+            <li><a href="/#services" class="text-[13.5px] text-white/38 hover:text-white transition-colors inline-block hover:translate-x-1 transition-transform">{item}</a></li>
+          ))}
+        </ul>
+      </div>
+
+      <!-- Contact -->
+      <div>
+        <h4 class="font-display font-semibold text-white text-[13px] mb-5 uppercase tracking-wider">Contact</h4>
+        <ul class="space-y-4">
+          <li>
+            <a href="tel:+919591591783" class="flex items-start gap-2.5 text-[13.5px] text-white/38 hover:text-white transition-colors group">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-[#e5173f] mt-0.5 flex-shrink-0"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8 19.79 19.79 0 01.22 1.18a2 2 0 012-1.98h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.2 6.2l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+              +91 95915 91783
+            </a>
+          </li>
+          <li>
+            <a href="mailto:redmediasolutins8@gmail.com" class="flex items-start gap-2.5 text-[13.5px] text-white/38 hover:text-white transition-colors group">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-[#e5173f] mt-0.5 flex-shrink-0"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              redmediasolutins8@gmail.com
+            </a>
+          </li>
+          <li>
+            <span class="flex items-center gap-2.5 text-[13.5px] text-white/38">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-[#e5173f] flex-shrink-0"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              Mangaluru, Karnataka, India
+            </span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Bottom bar -->
+    <div class="pt-8 border-t border-white/[0.06] flex flex-col md:flex-row items-center justify-between gap-4">
+      <p class="text-[12px] text-white/25">
+        © {new Date().getFullYear()} Red Media Solutions. All rights reserved.
+      </p>
+      <div class="flex gap-5">
+        <a href="#" class="text-[12px] text-white/25 hover:text-white/60 transition-colors">Privacy Policy</a>
+        <a href="#" class="text-[12px] text-white/25 hover:text-white/60 transition-colors">Terms of Service</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scroll to top -->
+  <button id="scrollTop" aria-label="Back to top"
+    class="fixed bottom-7 right-7 w-10 h-10 bg-[#e5173f] rounded-full flex items-center justify-center shadow-lg shadow-[#e5173f]/25 hover:shadow-[#e5173f]/45 hover:-translate-y-1 transition-all duration-300 z-40 opacity-0 pointer-events-none">
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
+</footer>
+
+<script>
+  const btn = document.getElementById('scrollTop')!;
+  window.addEventListener('scroll', () => {
+    const show = window.scrollY > 400;
+    btn.style.opacity = show ? '1' : '0';
+    btn.style.pointerEvents = show ? 'auto' : 'none';
+  }, {passive:true});
+  btn.addEventListener('click', () => window.scrollTo({top:0, behavior:'smooth'}));
+</script>

@@ -1,0 +1,207 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navigation from '../../components/Navigation.astro';
+import Footer from '../../components/Footer.astro';
+
+const p = {
+  name: '108 Medz',
+  tagline: 'Affordable Medicine Delivery App',
+  category: 'HealthTech · Mobile App',
+  year: '2024',
+  color: '#14b866',
+  colorDark: '#0a2a1a',
+  tech: ['Flutter', 'Dart', 'Node.js', 'MariaDB'],
+  overview: `108 Medz is a healthcare mobile app that makes quality medicines affordable and accessible. Users can browse 2000+ products from WHO/GMP-approved manufacturers, upload prescriptions via WhatsApp, track orders and save up to 70% compared to retail pharmacy prices — all from their phone.`,
+  challenge: `The client observed that customers in tier-2 and tier-3 cities were overpaying for medicines by 60–80% at local pharmacies. The core challenge was building a trustworthy app that simplified prescription uploads, offered genuine savings and provided transparent order tracking without overwhelming users with too many steps.`,
+  solution: `We built a Flutter app with a straightforward blue-green palette that conveys health and trust. The WhatsApp prescription upload flow reduces friction for older users. The product catalogue with savings badges and WHOs-verified manufacturer info builds confidence. A clean order tracking screen keeps customers informed at every stage.`,
+  results: [
+    { v: '70%', l: 'Average Cost Savings' },
+    { v: '2000+', l: 'Products Listed' },
+    { v: 'WHO/GMP', l: 'Certified Products' },
+    { v: '10 Day', l: 'Return Policy' },
+  ],
+  features: [
+    { title: 'Product Catalogue', desc: '2000+ medicines from WHO/GMP-approved manufacturers with transparent pricing and savings percentages.' },
+    { title: 'WhatsApp Upload', desc: 'Simple prescription upload via WhatsApp — no app account required to start an order.' },
+    { title: 'Order Tracking', desc: 'Real-time order status from placement to doorstep delivery with clear milestone tracking.' },
+    { title: '70% Savings', desc: 'Medicines sourced directly from top pharma brands, passing massive savings to the end user.' },
+    { title: '10-Day Returns', desc: 'Hassle-free return policy for unopened products within 10 days of delivery.' },
+    { title: 'Cross-Platform', desc: 'Single Flutter codebase published to both the Apple App Store and Google Play Store.' },
+  ],
+};
+---
+
+<Layout title={`${p.name} — Red Media Solutions`}>
+  <Navigation />
+  <main class="pt-[72px]">
+
+    <!-- Hero -->
+    <section class="relative min-h-[60vh] flex items-end overflow-hidden pb-16">
+      <div class="absolute inset-0" style={`background:linear-gradient(160deg,#0a0a0a 0%,${p.colorDark}60 50%,#0a0a0a 100%)`}></div>
+      <div class="absolute top-1/3 right-1/4 w-[500px] h-[500px] rounded-full blur-[180px] opacity-[0.15]" style={`background:${p.color}`}></div>
+      <div class="relative z-10 max-w-7xl mx-auto px-5 lg:px-10 w-full">
+        <a href="/#work" class="inline-flex items-center gap-2 text-white/40 hover:text-white transition-colors text-sm mb-8">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M13 7H1M6 2L1 7l5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Back to Work
+        </a>
+        <div class="reveal inline-flex items-center gap-2 px-3 py-1.5 rounded-full border mb-5" style={`border-color:${p.color}30;background:${p.color}12`}>
+          <span class="w-1.5 h-1.5 rounded-full" style={`background:${p.color}`}></span>
+          <span class="text-[11px] font-medium" style={`color:${p.color}`}>{p.category} · {p.year}</span>
+        </div>
+        <h1 class="reveal reveal-delay-1 font-display font-extrabold text-[clamp(3rem,8vw,6.5rem)] text-white leading-[.9] tracking-tight mb-4">{p.name}</h1>
+        <p class="reveal reveal-delay-2 text-white/50 text-lg md:text-xl max-w-xl leading-relaxed">{p.tagline}</p>
+        <div class="reveal reveal-delay-3 flex flex-wrap gap-2 mt-8">
+          {p.tech.map(t => <span class="px-3 py-1.5 text-[11.5px] text-white/40 bg-white/[0.05] border border-white/[0.08] rounded-full">{t}</span>)}
+        </div>
+      </div>
+    </section>
+
+    <!-- Results strip -->
+    <section class="border-y border-white/[0.06] bg-[#0d0d0d]">
+      <div class="max-w-7xl mx-auto px-5 lg:px-10">
+        <div class="grid grid-cols-2 md:grid-cols-4 divide-x divide-white/[0.06]">
+          {p.results.map((r,i) => (
+            <div class={`reveal reveal-delay-${i+1} p-8 text-center`}>
+              <div class="font-display font-extrabold text-3xl md:text-4xl mb-1" style={`color:${p.color}`}>{r.v}</div>
+              <div class="text-[11px] text-white/35 uppercase tracking-widest">{r.l}</div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Phone mockups -->
+    <section class="py-20 bg-[#0a0a0a]">
+      <div class="max-w-5xl mx-auto px-5 lg:px-10">
+        <div class="reveal flex flex-col md:flex-row items-center justify-center gap-8">
+
+          <!-- Screen 1: Why Choose us -->
+          <div class="phone-mockup w-[210px] h-[420px] flex-shrink-0 overflow-hidden" style={`box-shadow:0 40px 80px ${p.color}20`}>
+            <div style="font-family:-apple-system,sans-serif;height:100%;overflow:hidden;background:#fff">
+              <div style="background:linear-gradient(135deg,#1a3c8f,#2563eb);padding:18px 14px;color:#fff">
+                <div style="font-size:8px;opacity:.7;margin-bottom:3px">108 MEDZ · YOUR HEALTH PARTNER</div>
+                <div style="font-size:14px;font-weight:700;margin-bottom:10px">Affordable<br/>Healthcare</div>
+                <div style="background:rgba(255,255,255,.95);border-radius:9px;padding:11px;color:#1a1a1a">
+                  <div style="color:#2563eb;font-weight:700;font-size:11px;margin-bottom:4px">Why Choose 108 Medz</div>
+                  <div style="color:#666;font-size:9px;line-height:1.4;margin-bottom:8px">Quality, affordable and accessible healthcare for everyone</div>
+                  <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px">
+                    <div style="display:flex;gap:4px;align-items:center;padding:4px;background:#f8fafc;border-radius:5px"><span style="font-size:11px">🏭</span><span style="font-size:8px;color:#333">Top Brands</span></div>
+                    <div style="display:flex;gap:4px;align-items:center;padding:4px;background:#f8fafc;border-radius:5px"><span style="font-size:11px">✅</span><span style="font-size:8px;color:#333">WHO Approved</span></div>
+                    <div style="display:flex;gap:4px;align-items:center;padding:4px;background:#f8fafc;border-radius:5px"><span style="font-size:11px">↩️</span><span style="font-size:8px;color:#333">10 Day Returns</span></div>
+                    <div style="display:flex;gap:4px;align-items:center;padding:4px;background:#f8fafc;border-radius:5px"><span style="font-size:11px">📦</span><span style="font-size:8px;color:#333">2000+ Products</span></div>
+                  </div>
+                </div>
+              </div>
+              <div style="padding:10px 12px">
+                <div style="background:linear-gradient(135deg,#1a3c8f,#2563eb);border-radius:9px;padding:10px;color:#fff;display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
+                  <div><div style="font-size:9px;font-weight:700">100% Safe Medicine</div><div style="font-size:7px;opacity:.75;margin-top:2px">Top Pharma Brands</div></div>
+                  <div style="background:rgba(255,255,255,.15);border-radius:6px;padding:5px 8px;text-align:center"><div style="font-size:7px">Savings</div><div style="font-size:14px;font-weight:800;color:#4ade80">70%</div></div>
+                </div>
+                <div style="background:#f8fafb;border-radius:8px;padding:8px;display:flex;align-items:center;gap:6px">
+                  <span style="font-size:16px">💊</span>
+                  <div><div style="font-size:9px;font-weight:600;color:#1a1a1a">Upload Prescription</div><div style="font-size:8px;color:#888">via WhatsApp</div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Screen 2: Order tracking -->
+          <div class="phone-mockup w-[210px] h-[420px] flex-shrink-0 overflow-hidden md:-mt-10 z-10" style={`box-shadow:0 50px 100px ${p.color}28`}>
+            <div style="font-family:-apple-system,sans-serif;height:100%;overflow:hidden;background:#f8fafb">
+              <div style="background:linear-gradient(135deg,#1a3c8f,#2563eb);padding:14px 12px 10px;color:#fff">
+                <div style="font-size:11px;font-weight:700">Track your Orders</div>
+                <div style="font-size:9px;opacity:.7;margin-top:2px">3 orders placed</div>
+              </div>
+              <div style="padding:10px 12px">
+                ${[
+                  {id:'#1242',desc:'Paracetamol · Crocin · Dolo 650',status:'Delivered',statusBg:'#e6f9f0',statusColor:'#14b866',icon:'✓'},
+                  {id:'#1241',desc:'Azithromycin 500mg',status:'In Transit',statusBg:'#fef3c7',statusColor:'#d97706',icon:'🚚'},
+                  {id:'#1240',desc:'BP Medicine · Amlodipine',status:'Processing',statusBg:'#eff4ff',statusColor:'#4f8ef7',icon:'⏳'},
+                ].map(order=>`
+                <div style="background:#fff;border:1px solid #eee;border-radius:9px;padding:10px;margin-bottom:7px;box-shadow:0 1px 3px rgba(0,0,0,.04)">
+                  <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:5px">
+                    <span style="font-weight:700;font-size:10px;color:#1a1a1a">Order ${order.id}</span>
+                    <span style="padding:2px 7px;border-radius:10px;font-size:8px;font-weight:600;background:${order.statusBg};color:${order.statusColor}">${order.status}</span>
+                  </div>
+                  <div style="font-size:8px;color:#888;line-clamp:1">${order.desc}</div>
+                  <div style="margin-top:6px;height:3px;background:#eee;border-radius:2px;overflow:hidden">
+                    <div style="height:100%;width:${order.status==='Delivered'?'100':order.status==='In Transit'?'65':'30'}%;background:${order.statusColor};border-radius:2px"></div>
+                  </div>
+                </div>`).join('')}
+                <div style="background:linear-gradient(135deg,#1a3c8f,#2563eb);border-radius:9px;padding:10px;color:#fff;display:flex;align-items:center;gap:8px">
+                  <span style="font-size:18px">💊</span>
+                  <div><div style="font-size:9px;font-weight:700">Quick Reorder</div><div style="font-size:8px;opacity:.75">Based on your history</div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Screen 3: Product browse -->
+          <div class="phone-mockup w-[210px] h-[420px] flex-shrink-0 overflow-hidden" style={`box-shadow:0 40px 80px ${p.color}15`}>
+            <div style="font-family:-apple-system,sans-serif;height:100%;overflow:hidden;background:#f8fafb">
+              <div style="background:#fff;padding:12px;border-bottom:1px solid #eee;display:flex;align-items:center;gap:8px">
+                <div style="flex:1;background:#f1f5f9;border-radius:8px;padding:7px 10px;font-size:9px;color:#aaa">🔍 Search medicines…</div>
+                <span style="font-size:16px">🛒</span>
+              </div>
+              <div style="padding:10px 12px">
+                <div style="font-size:10px;font-weight:700;color:#1a1a1a;margin-bottom:8px">Categories</div>
+                <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:5px;margin-bottom:10px">
+                  ${[{e:'💊',l:'Tablets'},{e:'🩺',l:'Medical'},{e:'🌿',l:'Herbal'},{e:'👶',l:'Baby Care'},{e:'💆',l:'Wellness'},{e:'🔬',l:'Vitamins'}].map(c=>`<div style="background:#fff;border:1px solid #eee;border-radius:7px;padding:7px 4px;text-align:center"><div style="font-size:14px">${c.e}</div><div style="font-size:7px;color:#555;margin-top:2px">${c.l}</div></div>`).join('')}
+                </div>
+                <div style="font-size:10px;font-weight:700;color:#1a1a1a;margin-bottom:7px">Top Savings</div>
+                ${[
+                  {name:'Crocin 650mg',orig:'₹45',save:'₹14',pct:'70%'},
+                  {name:'Dolo 650 Strip',orig:'₹30',save:'₹9',pct:'68%'},
+                ].map(prod=>`<div style="background:#fff;border:1px solid #eee;border-radius:9px;padding:8px;margin-bottom:6px;display:flex;align-items:center;gap:8px">
+                  <div style="width:34px;height:34px;background:linear-gradient(135deg,#e6f9f0,#bbf7d0);border-radius:7px;display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0">💊</div>
+                  <div style="flex:1"><div style="font-size:9px;font-weight:600;color:#1a1a1a">${prod.name}</div><div style="display:flex;gap:5px;margin-top:2px"><span style="font-size:9px;font-weight:700;color:#1a1a1a">${prod.save}</span><span style="font-size:8px;color:#aaa;text-decoration:line-through">${prod.orig}</span></div></div>
+                  <div style="background:#e6f9f0;color:#14b866;padding:2px 6px;border-radius:8px;font-size:8px;font-weight:700">${prod.pct}</div>
+                </div>`).join('')}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Content -->
+    <section class="py-20 bg-[#080808] border-t border-white/[0.04]">
+      <div class="max-w-7xl mx-auto px-5 lg:px-10">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <div class="reveal"><h2 class="font-display font-bold text-2xl text-white mb-4">Project Overview</h2><p class="text-white/50 text-[15px] leading-relaxed">{p.overview}</p></div>
+          <div class="reveal reveal-delay-2"><h2 class="font-display font-bold text-2xl text-white mb-4">The Challenge</h2><p class="text-white/50 text-[15px] leading-relaxed">{p.challenge}</p></div>
+        </div>
+        <div class="reveal reveal-delay-3 mt-12"><h2 class="font-display font-bold text-2xl text-white mb-4">Our Solution</h2><p class="text-white/50 text-[15px] leading-relaxed max-w-3xl">{p.solution}</p></div>
+      </div>
+    </section>
+
+    <section class="py-20 bg-[#0a0a0a]">
+      <div class="max-w-7xl mx-auto px-5 lg:px-10">
+        <h2 class="reveal font-display font-bold text-3xl text-white mb-10">Key Features</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 stagger">
+          {p.features.map(f => (
+            <div class="reveal card-hover p-6 rounded-2xl border border-white/[0.06] bg-white/[0.02] group cursor-default">
+              <div class="w-10 h-10 rounded-xl mb-4 flex items-center justify-center" style={`background:${p.color}14;border:1px solid ${p.color}25`}>
+                <div class="w-2 h-2 rounded-full" style={`background:${p.color}`}></div>
+              </div>
+              <h3 class="font-display font-semibold text-white mb-2 group-hover:text-[#e5173f] transition-colors">{f.title}</h3>
+              <p class="text-white/45 text-sm leading-relaxed">{f.desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20 bg-[#080808] border-t border-white/[0.04]">
+      <div class="max-w-2xl mx-auto px-5 text-center reveal">
+        <h2 class="font-display font-extrabold text-3xl md:text-4xl text-white mb-4">Need something like this?</h2>
+        <p class="text-white/45 text-base mb-8 leading-relaxed">We build custom platforms tailored to your business. Let's talk about your project.</p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="/#contact" class="btn-primary px-7 py-3.5">Start a Project</a>
+          <a href="/#work" class="btn-outline px-7 py-3.5">View More Work</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>

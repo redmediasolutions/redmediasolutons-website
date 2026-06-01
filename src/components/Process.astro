@@ -1,0 +1,84 @@
+---
+const steps = [
+  {
+    n:'01',
+    title:'Discovery',
+    desc:'We dig deep into your business goals, users and constraints. Research, competitive analysis and a tight project scope — before a single line of code.',
+    tags:['Research','Strategy','Scoping','Roadmap'],
+    icon:`<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>`,
+  },
+  {
+    n:'02',
+    title:'Design',
+    desc:'Wireframes to high-fidelity prototypes crafted in Affinity and Adobe tools. Every interaction considered, every screen intentional.',
+    tags:['UI/UX','Affinity','Adobe','Prototyping'],
+    icon:`<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>`,
+  },
+  {
+    n:'03',
+    title:'Development',
+    desc:'Agile sprints with clean code, thorough testing and continuous delivery. Backend, frontend and mobile — all built in-house by our team.',
+    tags:['Astro','Flutter','Node.js','MariaDB'],
+    icon:`<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>`,
+  },
+  {
+    n:'04',
+    title:'Launch & Support',
+    desc:'Deploy to AWS or your preferred host with zero downtime. QA, performance tuning and ongoing maintenance — we stay with you after go-live.',
+    tags:['AWS','Deployment','QA','Support'],
+    icon:`<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 2L11 13"/><path d="M22 2L15 22 11 13 2 9l20-7z"/></svg>`,
+  },
+];
+---
+
+<section id="process" class="relative py-28 overflow-hidden bg-[#080808]">
+  <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#e5173f]/20 to-transparent"></div>
+  <div class="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#e5173f]/10 to-transparent"></div>
+  <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-[#e5173f] rounded-full blur-[240px] opacity-[0.03]"></div>
+
+  <div class="max-w-7xl mx-auto px-5 lg:px-10">
+
+    <div class="text-center mb-14">
+      <div class="reveal inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[#e5173f]/20 bg-[#e5173f]/[0.06] mb-5">
+        <span class="w-1.5 h-1.5 rounded-full bg-[#e5173f]"></span>
+        <span class="text-[#e5173f] text-[11px] uppercase tracking-widest">How We Work</span>
+      </div>
+      <h2 class="reveal reveal-delay-1 font-display font-extrabold text-[clamp(2.2rem,5vw,3.8rem)] text-white leading-tight">
+        Our <span class="text-gradient">Process</span>
+      </h2>
+      <p class="reveal reveal-delay-2 text-white/45 text-base mt-3 max-w-md mx-auto leading-relaxed">
+        A proven methodology that consistently delivers results — on scope, on time, on budget.
+      </p>
+    </div>
+
+    <!-- Connector line desktop -->
+    <div class="relative">
+      <div class="hidden lg:block absolute top-[54px] left-[10%] right-[10%] h-px bg-gradient-to-r from-transparent via-[#e5173f]/15 to-transparent pointer-events-none"></div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 stagger">
+        {steps.map((s,i)=>(
+          <div class="reveal card-hover group relative p-7 rounded-2xl border border-white/[0.06] bg-[#0d0d0d] hover:border-[#e5173f]/20 transition-all cursor-default overflow-hidden">
+            <!-- BG number -->
+            <div class="absolute bottom-3 right-5 font-display font-extrabold text-[4.5rem] text-white/[0.025] leading-none select-none pointer-events-none">{s.n}</div>
+
+            <div class="flex items-center justify-between mb-6">
+              <div class="w-11 h-11 rounded-xl bg-[#e5173f]/10 border border-[#e5173f]/20 flex items-center justify-center text-[#e5173f] group-hover:bg-[#e5173f]/20 transition-colors">
+                <Fragment set:html={s.icon}/>
+              </div>
+              <span class="font-mono text-[11px] text-white/20">{s.n}</span>
+            </div>
+
+            <h3 class="font-display font-bold text-[1.05rem] text-white mb-2.5 group-hover:text-[#e5173f] transition-colors">{s.title}</h3>
+            <p class="text-white/45 text-[13px] leading-relaxed mb-5">{s.desc}</p>
+
+            <div class="flex flex-wrap gap-1.5">
+              {s.tags.map(t=>(
+                <span class="px-2.5 py-1 text-[11px] text-white/35 bg-white/[0.04] border border-white/[0.06] rounded-full">{t}</span>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
